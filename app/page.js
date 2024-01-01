@@ -12,12 +12,12 @@ export default function Home() {
 
       <section className='flex flex-col items-center justify-center my-28' id='home'>
         <div className='flex flex-col items-center justify-center px-[15vh] py-[2vh] relative w-fit'>
-          <h1 className={`${acorn.className} text-primary-green text-9xl`}>Hi. I'm Aksh Walia.</h1>
+          <h1 className={`${acorn.className} text-primary-green text-9xl`}>Hi. I&apos;m Aksh Walia.</h1>
           <h2 className={`${acorn.className} text-primary-green text-9xl`} >A Web Developer.</h2>
           <Image src='/star.svg' alt='star' width={65} height={65} className='absolute left-0 bottom-0 star' />
           <Image src='/star.svg' alt='star' width={65} height={65} className='absolute right-0 top-0 star' />
         </div>
-        <p className='text-xl text-primary-green'>I'm passionate about crafting experiences that are engaging, accessible, and user-centric.</p>
+        <p className='text-xl text-primary-green'>I&apos;m passionate about crafting experiences that are engaging, accessible, and user-centric.</p>
       </section>
 
       <section className='flex gap-10 mx-11 flex-wrap'>
@@ -47,7 +47,7 @@ export default function Home() {
         <a href="http://where-pikachu.vercel.app/" className='flex-1'>
           <div className="card flex-1 min-w-[400px] h-[450px] bg-[#70beeb7e] rounded-[60px] text-right p-10 text-slate-800 relative overflow-hidden">
             <p className='text-lg'>ReactJS, MongoDB, Express</p>
-            <h3 className={`${acorn.className} text-5xl`}>Where's <br /> Pikachu</h3>
+            <h3 className={`${acorn.className} text-5xl`}>Where&apos;s <br /> Pikachu</h3>
             <Image src='/pikachu.png' width={350} height={350} alt='chatit' className='cardImage absolute -bottom-44 left-0 rounded-br-3xl' />
           </div>
         </a>

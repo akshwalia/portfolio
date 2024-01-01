@@ -9,7 +9,7 @@ export default function About() {
         <main>
             <section className='flex flex-col items-center justify-center my-20' id='home'>
                 <div className='flex flex-col items-center justify-center px-[15vh] py-[2vh] relative w-fit'>
-                    <h1 className={`${acorn.className} text-primary-green text-9xl`}>I'm Aksh.</h1>
+                    <h1 className={`${acorn.className} text-primary-green text-9xl`}>I&apos;m Aksh.</h1>
 
                 </div>
             </section>
@@ -29,7 +29,7 @@ export default function About() {
                         </div>
                     </div>
                     <div className="right flex-2.5 pt-7">
-                        <h2 className={`${acorn.className} text-primary-green text-6xl`}>I'm a second-year Computer Science Engineering student at Delhi Technological University, India.</h2>
+                        <h2 className={`${acorn.className} text-primary-green text-6xl`}>I&apos;m a second-year Computer Science Engineering student at Delhi Technological University, India.</h2>
                         <p className='text-primary-green text-xl my-5'>Self-taught Full Stack Developer continuously embracing new technologies to expand my skill set. Passionate about crafting seamless digital experiences, I thrive on the dynamic nature of web development.</p>
                         <p className='text-primary-green text-xl'>Open to freelance opportunities, I bring a dedication to learning and a knack for leveraging diverse technologies to create impactful solutions.</p>
                     </div>
@@ -57,7 +57,7 @@ export default function About() {
                 <div className='self-end max-w-[800px]'>
                     <h3 className={`${acorn.className} text-primary-green text-5xl mb-5`}>Open to collaboration with a focus on sustainability, education, equality, or carbon neutrality.</h3>
                     <div className='max-w-[600px] text-primary-green opacity-95 text-xl'>
-                        I'm driven by the belief that we should leave our Earth in a better state for future generations. My aim is to contribute to these ideals in any way possible. If you share this vision, I'd love to connect and discuss further.
+                        I&apos;m driven by the belief that we should leave our Earth in a better state for future generations. My aim is to contribute to these ideals in any way possible. If you share this vision, I&apos;d love to connect and discuss further.
                     </div>
                 </div>
             </section>
@@ -66,7 +66,7 @@ export default function About() {
                 <div>
                     <p className={`${acorn.className} text-5xl text-primary-green opacity-60 mb-5`}>01</p>
                     <h4 className={`${acorn.className} text-3xl text-primary-green mb-5`}>Clear Communication and Understanding</h4>
-                    <p className='text-primary-green opacity-95 text-xl'> I begin by thoroughly understanding my client's needs. I engage in detailed discussions, ask pertinent questions, and ensure we're aligned on the project's scope, goals, and timelines. Documenting these discussions helps avoid any future misunderstandings.</p>
+                    <p className='text-primary-green opacity-95 text-xl'> I begin by thoroughly understanding my client&apos;s needs. I engage in detailed discussions, ask pertinent questions, and ensure we&apos;re aligned on the project&apos;s scope, goals, and timelines. Documenting these discussions helps avoid any future misunderstandings.</p>
                 </div>
                 <div>
                     <p className={`${acorn.className} text-5xl text-primary-green opacity-60 mb-5`}>02</p>
@@ -80,7 +80,7 @@ export default function About() {
                 </div>
                 <div>
                     <p className={`${acorn.className} text-5xl text-primary-green opacity-60 mb-5`}>04</p>
-                    <h4 className={`${acorn.className} text-3xl text-primary-green mb-5`}>Clear Communication and Understanding</h4>
+                    <h4 className={`${acorn.className} text-3xl text-primary-green mb-5`}>Punctual Delivery and Comprehensive Post-Project Support</h4>
                     <p className='text-primary-green opacity-95 text-xl'> I make it a priority to meet deadlines or even surpass them. Moreover, I offer post-launch support and training sessions to ensure the client feels confident managing their website. Providing ongoing assistance demonstrates my dedication to their satisfaction beyond project completion.</p>
                 </div>
             </section>
@@ -91,10 +91,10 @@ export default function About() {
                         Back when I began coding, Java was like my first language in the tech world. It got me curious about how stuff worked behind the scenes on computers. But then, I stumbled onto web development—a whole new world that caught my attention.
                     </div>
                     <div className='text-primary-green text-xl'>
-                        Building websites became my thing. It wasn't just about making things work; it was about making them look cool and easy to use. It was like painting with pixels and code.
+                        Building websites became my thing. It wasn&apos;t just about making things work; it was about making them look cool and easy to use. It was like painting with pixels and code.
                     </div>
                     <div className='text-primary-green text-xl'>
-                        Besides tech, I found joy in other things like drawing, singing, and taking pictures. They're my ways of expressing feelings and freezing moments in time. These hobbies blend with my love for web design, making my journey both colorful and creative. Now, I'm all about crafting online experiences that people enjoy and remember.
+                        Besides tech, I found joy in other things like drawing, singing, and taking pictures. They&apos;re my ways of expressing feelings and freezing moments in time. These hobbies blend with my love for web design, making my journey both colorful and creative. Now, I&apos;m all about crafting online experiences that people enjoy and remember.
                     </div>
                 </div>
             </section>
