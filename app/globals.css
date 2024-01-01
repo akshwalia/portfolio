@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.fixNav {
+  background-color: rgba(255, 255, 255, 0.614);
+  transition: background-color 0.3s ease;
+}
+
+.navitem {
+  cursor: pointer;
+}
+
+ul .navbarSelected {
+  background-color: rgba(255, 255, 255, 0.826);
+  
+  border-radius: 30px;
+  opacity: 1;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  30%,70% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}
+
+.star {
+  animation: twinkle 3s infinite;
+}
+
+
+.card {
+  cursor: pointer;
+  transition-property: box-shadow, transform;
+  transition-duration: 0.4s, 0.4s;
+  transition-timing-function: ease, ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  transition-property: box-shadow, transform;
+  transition-duration: 0.4s, 0.4s;
+  transition-timing-function: ease, ease;
+  box-shadow: 0 0 40px rgba(33, 33, 33, 0.275);
+  
+}
+
+.cardImage {
+  transition: transform 0.4s ease;
+}
+
+.card:hover .cardImage{
+  transform: translateY(15px);
+  transition: transform 0.4s ease;
+}
+
+.icons > div {
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.icons > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 40px rgba(33, 33, 33, 0.275);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
