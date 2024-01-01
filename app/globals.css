@@ -58,8 +58,7 @@ ul .navbarSelected {
   transition-property: box-shadow, transform;
   transition-duration: 0.4s, 0.4s;
   transition-timing-function: ease, ease;
-  box-shadow: 0 0 40px rgba(33, 33, 33, 0.275);
-  
+  box-shadow: 0 0 40px rgba(33, 33, 33, 0.101);
 }
 
 .cardImage {
