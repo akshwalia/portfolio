@@ -20,7 +20,7 @@ export default function About() {
                         <div className='relative'>
                             <Image src='/aksh3.jpg' width={370} height={800} alt='Aksh' className='rounded-tr-full rounded-tl-full' />
                             <div className='bg-primary-green h-20 w-full absolute bottom-0 flex justify-start items-center gap-5 px-6'>
-                                <Image src='/spotify-white.svg' width={50} height={50} alt='spotify' className='rounded-full opacity-40' />
+                                <Image src='/Spotify-white.svg' width={50} height={50} alt='spotify' className='rounded-full opacity-40' />
                                 <div className='flex flex-col justify-center h-full text-white opacity-75'>
                                     <p className='text-sm text-white'>Currently listening to</p>
                                     <p className={`${acorn.className} text-lg`}>The Beatles</p>
