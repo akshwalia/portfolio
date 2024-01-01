@@ -47,7 +47,7 @@ export default function Template({ children }) {
                     </div>
                     <div className="right flex-1">
                         <div className="flex flex-col justify-center gap-5">
-                            <h3 className={`${acorn.className} text-3xl text-primary-green`}>Let's talk.</h3>
+                            <h3 className={`${acorn.className} text-3xl text-primary-green`}>Let&apos;s talk.</h3>
                             <ul className='flex flex-col gap-4'>
                                 <a href="mailto:akshwalia20@gmail.com?subject=Portfolio Inquiry&body=Hello,%0D%0A%0D%0AI came across your portfolio and wanted to connect regarding potential opportunities. Looking forward to discussing further.%0D%0A%0D%0ARegards,%0D%0A[Your Name]" className='text-[#025a4eda] hover:text-primary-green'>Mail</a>
                                 <a href="https://www.linkedin.com/in/aksh-walia-aa6b3b20b/" className='text-[#025a4eda] hover:text-primary-green'>LinkedIn</a>
