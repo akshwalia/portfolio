@@ -4,6 +4,42 @@
 
 html {
   scroll-behavior: smooth;
+  
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@keyframes moveGradient {
+  0% {
+    transform: translateX(0px) scaleX(3);
+  }
+
+  30% {
+    transform: translateX(-100%) scaleX(3);
+  }
+
+  70% {
+    transform: translateX(100%) scaleX(3);
+  }
+
+  100% {
+    transform: translateX(0px) scaleX(3);
+  }
+}
+
+.gradient {
+  background: rgb(159, 105, 4);
+  background: linear-gradient(90deg, rgba(40,98,6,0.4) 18%, rgba(126, 76, 5, 0.4) 44%, rgba(118,6,142,0.2) 76%);
+
+  mask-image: linear-gradient(#000, rgba(0, 0, 0, 0));
+  -webkit-mask-image: linear-gradient(#000, rgba(0, 0, 0, 0));
+  
+  transform: scaleX(3);
+  animation: moveGradient 15s linear infinite;
+
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .navbar {
@@ -22,22 +58,25 @@ html {
 
 ul .navbarSelected {
   background-color: rgba(255, 255, 255, 0.826);
-  
+
   border-radius: 30px;
   opacity: 1;
 }
 
 @keyframes twinkle {
   0% {
-    opacity: 0.5;
+    opacity: 0.3;
     transform: scale(1);
   }
-  30%,70% {
+
+  30%,
+  70% {
     opacity: 1;
     transform: scale(1.2);
   }
+
   100% {
-    opacity: 0.5;
+    opacity: 0.3;
     transform: scale(1);
   }
 }
@@ -53,6 +92,7 @@ ul .navbarSelected {
   transition-duration: 0.4s, 0.4s;
   transition-timing-function: ease, ease;
 }
+
 .card:hover {
   transform: translateY(-10px);
   transition-property: box-shadow, transform;
@@ -65,17 +105,17 @@ ul .navbarSelected {
   transition: transform 0.4s ease;
 }
 
-.card:hover .cardImage{
+.card:hover .cardImage {
   transform: translateY(15px);
   transition: transform 0.4s ease;
 }
 
-.icons > div {
+.icons>div {
   cursor: pointer;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.icons > div:hover {
+.icons>div:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 40px rgba(33, 33, 33, 0.275);
   transition: box-shadow 0.3s ease, transform 0.3s ease;

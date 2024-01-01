@@ -93,6 +93,9 @@ export default function Home() {
           <div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center">
             <Image src='/socketio.svg' width={70} height={70} alt='mongodb' />
           </div>
+          <div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center">
+            <Image src='/java.svg' width={70} height={70} alt='mongodb' />
+          </div>
         </div>
       </section>
 

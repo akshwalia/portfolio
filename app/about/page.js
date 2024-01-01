@@ -1,10 +1,14 @@
+'use client'
+
 import Image from 'next/image'
 import localFont from 'next/font/local'
+import { useState } from "react"
 import clsx from 'clsx';
 
 const acorn = localFont({ src: '../fonts/Acorn-Bold.woff2' });
 
 export default function About() {
+    const [showLocation, setShowLocation] = useState(0);
     return (
         <main>
             <section className='flex flex-col items-center justify-center my-20' id='home'>
@@ -99,8 +103,15 @@ export default function About() {
                 </div>
             </section>
 
-            <section>
-
+            <section className='flex gap-10 justify-center'>
+                <div className='relative overflow-hidden'>
+                    <Image src='/fog.jpg' width={350} height={281} alt='fog' className='rounded-2xl' onMouseOver={() => setShowLocation(1)} onMouseOut={()=> setShowLocation(0)} />
+                    <p className={`bg-[#ffffff5d] py-1 px-3 rounded-xl absolute left-5 -bottom-10 transition-transform ${clsx(showLocation==1 && '-translate-y-[60px]')}`}>Delhi, India</p>
+                </div>
+                <div className='relative overflow-hidden'>
+                    <Image src='/diya.jpg' width={350} height={281} alt='diya' className='rounded-2xl' onMouseOver={() => setShowLocation(2)} onMouseOut={()=> setShowLocation(0)} />
+                    <p className={`bg-[#ffffff5d] py-1 px-3 rounded-xl absolute left-5 -bottom-10 transition-transform ${clsx(showLocation==2 && '-translate-y-[60px]')}`}>Dehradun, India</p>
+                </div>
             </section>
         </main>
     )
