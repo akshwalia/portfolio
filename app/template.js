@@ -25,7 +25,7 @@ export default function Template({ children }) {
                 
             </div>
 
-            <nav className={`flex justify-center m-5 text-primary-green font-bold sticky top-5 z-10 p `}>
+            <nav className={`flex justify-center m-5 text-primary-green font-bold sticky top-5 z-1000 p `}>
                 <div>
                     <ul className={`navbar flex items-center justify-between text-xl w-[500px] p-2 ${clsx(scrollY > 130 && 'fixNav')}`}>
                         <Link href='/'><li className={`px-4 py-2 navitem ${clsx(selected === 1 && 'navbarSelected')}`} onClick={() => setSelected(1)}>Home</li></Link>

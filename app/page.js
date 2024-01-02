@@ -17,7 +17,7 @@ export default function Home() {
           <Image src='/star.svg' alt='star' width={65} height={65} className='absolute left-0 bottom-0 star' />
           <Image src='/star.svg' alt='star' width={65} height={65} className='absolute right-0 top-0 star' />
         </div>
-        <p className='text-xl text-primary-green'>I&apos;m passionate about crafting experiences that are engaging, accessible, and user-centric.</p>
+        <p className='text-xl text-primary-green text-center mt-5 '>I&apos;m passionate about crafting experiences that are engaging, accessible, and user-centric.</p>
       </section>
 
       <section className='flex gap-10 mx-11 flex-wrap'>

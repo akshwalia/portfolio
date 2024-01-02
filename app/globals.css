@@ -9,6 +9,11 @@ html {
   overflow-x: hidden;
 }
 
+nav {
+  perspective: 10px;
+  z-index: 1000;
+}
+
 @keyframes moveGradient {
   0% {
     transform: translateX(0px) scaleX(3);
@@ -91,6 +96,8 @@ ul .navbarSelected {
   transition-property: box-shadow, transform;
   transition-duration: 0.4s, 0.4s;
   transition-timing-function: ease, ease;
+  perspective: 10px;
+  z-index: 100;
 }
 
 .card:hover {
@@ -99,6 +106,18 @@ ul .navbarSelected {
   transition-duration: 0.4s, 0.4s;
   transition-timing-function: ease, ease;
   box-shadow: 0 0 40px rgba(33, 33, 33, 0.101);
+}
+
+.projectcard {
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  perspective: 10px;
+  z-index: 100;
+}
+
+.projectcard:hover {
+  transform: translateY(-4px);
+  transition: transform 0.4s ease;
 }
 
 .cardImage {

@@ -112,6 +112,10 @@ export default function About() {
                     <Image src='/diya.jpg' width={350} height={281} alt='diya' className='rounded-2xl' onMouseOver={() => setShowLocation(2)} onMouseOut={()=> setShowLocation(0)} />
                     <p className={`bg-[#ffffff5d] py-1 px-3 rounded-xl absolute left-5 -bottom-10 transition-transform ${clsx(showLocation==2 && '-translate-y-[60px]')}`}>Dehradun, India</p>
                 </div>
+                <div className='relative overflow-hidden'>
+                    <Image src='/clock.jpg' width={350} height={281} alt='clock' className='rounded-2xl' onMouseOver={() => setShowLocation(3)} onMouseOut={()=> setShowLocation(0)} />
+                    <p className={`bg-[#ffffff5d] py-1 px-3 rounded-xl absolute left-5 -bottom-10 transition-transform ${clsx(showLocation==3 && '-translate-y-[60px]')}`}>Dehradun, India</p>
+                </div>
             </section>
         </main>
     )
