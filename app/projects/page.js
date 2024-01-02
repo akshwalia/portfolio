@@ -12,7 +12,7 @@ export default function Projects() {
                     <h1 className={`${acorn.className} text-primary-green text-9xl`}>Play.</h1>
                     <Image src='/star.svg' alt='star' width={65} height={65} className='absolute right-0 top-0 star' />
                 </div>
-                <p className='text-xl text-primary-green max-w-[700px] text-center mt-8'>A collection of tools and sites I've created, designed to be helpful, fun, & sometimes just a little bit weird.</p>
+                <p className='text-xl text-primary-green max-w-[700px] text-center mt-8'>A collection of tools and sites I&apos;ve created, designed to be helpful, fun, & sometimes just a little bit weird.</p>
             </section>
 
             <section className='grid grid-cols-3 h-[500px] mx-11 gap-7'>
@@ -39,7 +39,7 @@ export default function Projects() {
                         <div className='flex justify-between items-center'>
                             <div className='h-full flex flex-col flex-1 justify-center'>
                                 <h4 className='font-bold text-xl text-primary-green mb-3'>Pokémemo</h4>
-                                <p className='text-primary-green opacity-90'> Gotta Remember 'Em All! Can You Uncover 'Em Without A Second Poke?</p>
+                                <p className='text-primary-green opacity-90'> Gotta Remember &apos;Em All! Can You Uncover &apos;Em Without A Second Poke?</p>
                             </div>
                             <Image src='/pokeball.png' width={110} height={0} alt='pokeball' className='flex-grow-0 flex-shrink-0 h-[110px]' />
                         </div>
@@ -47,7 +47,7 @@ export default function Projects() {
                     <a href="http://where-pikachu.vercel.app/" target='_blank'className="projectcard bg-[#ffffff60] flex-1 rounded-3xl flex justify-between py-2 px-8 items-center">
                         <div className='flex justify-between items-center'>
                             <div className='h-full flex flex-col flex-1 justify-center'>
-                                <h4 className='font-bold text-xl text-primary-green mb-2'>Where's Pikachu</h4>
+                                <h4 className='font-bold text-xl text-primary-green mb-2'>Where&apos;s Pikachu</h4>
                                 <p className='text-primary-green opacity-90'> Scan the crowded image, spot the requested Pokemon, and test your eye for detail!</p>
                             </div>
                             <Image src='/greatball.png' width={100} height={0} alt='greatball' className='flex-grow-0 flex-shrink-0 h-[100px]' />
