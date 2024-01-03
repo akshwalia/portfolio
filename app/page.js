@@ -1,7 +1,9 @@
+'use client'
 
 import Image from 'next/image'
 import localFont from 'next/font/local'
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
 
 const acorn = localFont({ src: './fonts/Acorn-Bold.woff2' });
 
@@ -12,15 +14,49 @@ export default function Home() {
 
       <section className='flex flex-col items-center justify-center my-28' id='home'>
         <div className='flex flex-col items-center justify-center px-[15vh] py-[2vh] relative w-fit'>
-          <h1 className={`${acorn.className} text-primary-green text-9xl`}>Hi. I&apos;m Aksh Walia.</h1>
-          <h2 className={`${acorn.className} text-primary-green text-9xl`} >A Web Developer.</h2>
-          <Image src='/star.svg' alt='star' width={65} height={65} className='absolute left-0 bottom-0 star' />
-          <Image src='/star.svg' alt='star' width={65} height={65} className='absolute right-0 top-0 star' />
+          <motion.h1
+            className={`${acorn.className} text-primary-green text-9xl`}
+            initial={{ y: -30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.2, ease: 'easeIn' }}>
+            Hi. I&apos;m Aksh Walia.
+          </motion.h1>
+          <motion.h2
+            className={`${acorn.className} text-primary-green text-9xl`}
+            initial={{ y: -30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.2, ease: 'easeIn' }}>
+            A Web Developer.
+          </motion.h2>
+          <motion.div
+            className='absolute left-0 bottom-0 star w-[60px] h-[60px]'
+            initial={{ transform: 'scale(0)'}}
+            animate={{ transform: 'scale(1)' }}
+            transition={{ duration: 1, ease: 'backInOut', delay: 0.7 }}>
+            <Image src='/star.svg' alt='star' width={65} height={65} />
+          </motion.div>
+          <motion.div
+            className='absolute right-0 top-0 star w-[60px] h-[60px]'
+            initial={{ transform: 'scale(0)'}}
+            animate={{ transform: 'scale(1)'}}
+            transition={{ duration: 1, ease: 'backInOut', delay: 0.7 }}>
+            <Image src='/star.svg' alt='star' width={65} height={65} />
+          </motion.div>
         </div>
-        <p className='text-xl text-primary-green text-center mt-5 '>I&apos;m passionate about crafting experiences that are engaging, accessible, and user-centric.</p>
+        <motion.p
+          className='text-xl text-primary-green text-center mt-5 '
+          initial={{ y: -30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.2, ease: 'easeIn', delay: 0.2 }}>
+          I&apos;m passionate about crafting experiences that are engaging, accessible, and user-centric.
+        </motion.p>
       </section>
 
-      <section className='flex gap-10 mx-11 flex-wrap'>
+      <motion.section
+        className='flex gap-10 mx-11 flex-wrap'
+        initial={{ y: -30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.2, ease: 'easeIn', delay: 0.2 }}>
         <a href="https://akshwalia.github.io/calculator/" rel='_blank' className='flex-1'>
           <div className="card  min-w-[400px] h-[450px] bg-[#df70eb94] rounded-[60px] text-right p-10 text-slate-800 relative overflow-hidden">
             <p className='text-lg'>Javascript</p>
@@ -35,7 +71,7 @@ export default function Home() {
             <Image src='/chatit.png' width={800} height={446} alt='Chat It' className='cardImage absolute -bottom-44 -right-8 rounded-br-3xl' />
           </div>
         </a>
-      </section>
+      </motion.section>
       <section className='flex gap-10 mx-11 my-28 flex-wrap'>
         <a href="https://akshwalia.github.io/weather/" className='flex-2'>
           <div className="card flex-1.5 min-w-[600px] h-[450px] bg-[#a5764f91] rounded-[60px] text-right p-10 text-slate-800 relative overflow-hidden">
@@ -54,7 +90,7 @@ export default function Home() {
       </section>
       <section className='flex flex-col items-center justify-center mt-28 mb-20' id='skills'>
         <div className='flex flex-col items-center justify-center px-[15vh] py-[2vh] relative w-fit'>
-          <h2 className={`${acorn.className} text-primary-green text-9xl`} >Skills.</h2>
+          <motion.h2 className={`${acorn.className} text-primary-green text-9xl`} >Skills.</motion.h2>
         </div>
         <p className='text-xl text-primary-green w-[670px] text-center'>Versatile expertise in web development, proficient in a spectrum of languages and frameworks, dedicated to delivering seamless, user-centric digital solutions.</p>
       </section>
@@ -99,7 +135,7 @@ export default function Home() {
         </div>
       </section>
 
-      
+
     </main>
   )
 }

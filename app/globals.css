@@ -4,8 +4,7 @@
 
 html {
   scroll-behavior: smooth;
-  
-  max-width: 100vw;
+  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -16,30 +15,27 @@ nav {
 
 @keyframes moveGradient {
   0% {
-    transform: translateX(0px) scaleX(3);
+    background-position: 0 0;
   }
 
-  30% {
-    transform: translateX(-100%) scaleX(3);
-  }
-
-  70% {
-    transform: translateX(100%) scaleX(3);
+  50% {
+    background-position: 100% 0;
   }
 
   100% {
-    transform: translateX(0px) scaleX(3);
+    background-position: 0 0;
   }
 }
 
 .gradient {
   background: rgb(159, 105, 4);
   background: linear-gradient(90deg, rgba(40,98,6,0.4) 18%, rgba(126, 76, 5, 0.4) 44%, rgba(118,6,142,0.2) 76%);
+  background-position: 0 0;
+  background-size: 300%;
 
   mask-image: linear-gradient(#000, rgba(0, 0, 0, 0));
   -webkit-mask-image: linear-gradient(#000, rgba(0, 0, 0, 0));
   
-  transform: scaleX(3);
   animation: moveGradient 15s linear infinite;
 
   position: absolute;
@@ -70,24 +66,24 @@ ul .navbarSelected {
 
 @keyframes twinkle {
   0% {
-    opacity: 0.3;
+    opacity: 1;
     transform: scale(1);
   }
 
-  30%,
-  70% {
-    opacity: 1;
+  50% {
+    opacity: 0.3;
     transform: scale(1.2);
   }
 
   100% {
-    opacity: 0.3;
+    opacity: 1;
     transform: scale(1);
   }
 }
 
 .star {
-  animation: twinkle 3s infinite;
+  animation: twinkle 3s infinite ;
+  animation-delay: 3.5s;
 }
 
 

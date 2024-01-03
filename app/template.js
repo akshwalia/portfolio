@@ -5,12 +5,16 @@ import clsx from "clsx";
 import Link from "next/link";
 import Image from "next/image";
 import localFont from 'next/font/local'
+import { useStore } from "../store";
 
 const acorn = localFont({ src: './fonts/Acorn-Bold.woff2' });
 
 export default function Template({ children }) {
     const [scrollY, setScrollY] = useState(0);
-    const [selected, setSelected] = useState(1);
+    
+    const selected = useStore(state => state.selected);
+    const setSelected = useStore(state => state.setSelected);
+
     useEffect(() => {
         const handleScroll = () => {
             setScrollY(window.scrollY);
