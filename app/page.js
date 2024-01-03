@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import localFont from 'next/font/local'
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
+import { motion, MotionConfig } from 'framer-motion';
 
 const acorn = localFont({ src: './fonts/Acorn-Bold.woff2' });
 
@@ -18,28 +18,28 @@ export default function Home() {
             className={`${acorn.className} text-primary-green text-9xl`}
             initial={{ y: -30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.2, ease: 'easeIn' }}>
+            transition={{ duration: 0.3, ease: 'easeIn' }}>
             Hi. I&apos;m Aksh Walia.
           </motion.h1>
           <motion.h2
             className={`${acorn.className} text-primary-green text-9xl`}
             initial={{ y: -30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.2, ease: 'easeIn' }}>
+            transition={{ duration: 0.3, ease: 'easeIn' }}>
             A Web Developer.
           </motion.h2>
           <motion.div
             className='absolute left-0 bottom-0 star w-[60px] h-[60px]'
-            initial={{ transform: 'scale(0)'}}
+            initial={{ transform: 'scale(0)' }}
             animate={{ transform: 'scale(1)' }}
-            transition={{ duration: 1, ease: 'backInOut', delay: 0.7 }}>
+            transition={{ duration: 1, ease: 'backInOut', delay: 0.5 }}>
             <Image src='/star.svg' alt='star' width={65} height={65} />
           </motion.div>
           <motion.div
             className='absolute right-0 top-0 star w-[60px] h-[60px]'
-            initial={{ transform: 'scale(0)'}}
-            animate={{ transform: 'scale(1)'}}
-            transition={{ duration: 1, ease: 'backInOut', delay: 0.7 }}>
+            initial={{ transform: 'scale(0)' }}
+            animate={{ transform: 'scale(1)' }}
+            transition={{ duration: 1, ease: 'backInOut', delay: 0.5 }}>
             <Image src='/star.svg' alt='star' width={65} height={65} />
           </motion.div>
         </div>
@@ -47,7 +47,7 @@ export default function Home() {
           className='text-xl text-primary-green text-center mt-5 '
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.2, ease: 'easeIn', delay: 0.2 }}>
+          transition={{ duration: 0.3, ease: 'easeIn', delay: 0.2 }}>
           I&apos;m passionate about crafting experiences that are engaging, accessible, and user-centric.
         </motion.p>
       </section>
@@ -56,7 +56,7 @@ export default function Home() {
         className='flex gap-10 mx-11 flex-wrap'
         initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.2, ease: 'easeIn', delay: 0.2 }}>
+        transition={{ duration: 0.3, ease: 'easeIn', delay: 0.2 }}>
         <a href="https://akshwalia.github.io/calculator/" rel='_blank' className='flex-1'>
           <div className="card  min-w-[400px] h-[450px] bg-[#df70eb94] rounded-[60px] text-right p-10 text-slate-800 relative overflow-hidden">
             <p className='text-lg'>Javascript</p>
@@ -90,48 +90,108 @@ export default function Home() {
       </section>
       <section className='flex flex-col items-center justify-center mt-28 mb-20' id='skills'>
         <div className='flex flex-col items-center justify-center px-[15vh] py-[2vh] relative w-fit'>
-          <motion.h2 className={`${acorn.className} text-primary-green text-9xl`} >Skills.</motion.h2>
+          <motion.h2 className={`${acorn.className} text-primary-green text-9xl`} 
+            initial={{ y: -30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true , amount: 0.5}}
+            transition={{ duration: 0.3, ease: 'easeIn', delay: 0.1 }}>Skills.</motion.h2>
         </div>
-        <p className='text-xl text-primary-green w-[670px] text-center'>Versatile expertise in web development, proficient in a spectrum of languages and frameworks, dedicated to delivering seamless, user-centric digital solutions.</p>
+        <motion.p className='text-xl text-primary-green w-[670px] text-center'
+          initial={{ y: -30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true , amount: 0.5}}
+          transition={{ duration: 0.3, ease: 'easeIn', delay: 0.3 }}>Versatile expertise in web development, proficient in a spectrum of languages and frameworks, dedicated to delivering seamless, user-centric digital solutions.</motion.p>
       </section>
       <section className='flex justify-center mb-20'>
         <div className='icons flex justify-center max-w-[950px] w-full flex-wrap gap-5'>
-          <div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center">
-            <Image src='/nextjs.svg' width={70} height={70} alt='mongodb' />
-          </div>
-          <div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center">
-            <Image src='/tailwind.svg' width={70} height={70} alt='mongodb' />
-          </div>
-          <div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center">
-            <Image src='/mongodb.svg' width={70} height={70} alt='mongodb' className='relative top-1' />
-          </div>
-          <div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center">
-            <Image src='/express.svg' width={70} height={70} alt='mongodb' className='invert' />
-          </div>
-          <div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center">
-            <Image src='/react.svg' width={70} height={70} alt='mongodb' />
-          </div>
-          <div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center">
-            <Image src='/node.svg' width={70} height={70} alt='mongodb' />
-          </div>
-          <div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center">
-            <Image src='/firebase.svg' width={70} height={70} alt='mongodb' />
-          </div>
-          <div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center">
-            <Image src='/html.svg' width={70} height={70} alt='mongodb' className='relative top-1' />
-          </div>
-          <div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center">
-            <Image src='/css.svg' width={70} height={70} alt='mongodb' className='relative top-1' />
-          </div>
-          <div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center">
-            <Image src='/jest.svg' width={70} height={70} alt='mongodb' />
-          </div>
-          <div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center">
-            <Image src='/socketio.svg' width={70} height={70} alt='mongodb' />
-          </div>
-          <div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center">
-            <Image src='/java.svg' width={70} height={70} alt='mongodb' />
-          </div>
+          <MotionConfig
+            
+          >
+            <motion.div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center"
+              initial={{ y: -10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true , amount: 0.5}}
+              transition={{ duration: 0.4, ease: 'easeInOut', delay: 0 }}>
+              <Image src='/nextjs.svg' width={70} height={70} alt='mongodb' />
+            </motion.div>
+            <motion.div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center"
+              initial={{ y: -10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true , amount: 0.5}}
+              transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.05 }}>
+              <Image src='/tailwind.svg' width={70} height={70} alt='mongodb' />
+            </motion.div>
+            <motion.div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center"
+              initial={{ y: -10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true , amount: 0.5}}
+              transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.1 }}>
+              <Image src='/mongodb.svg' width={70} height={70} alt='mongodb' className='relative top-1' />
+            </motion.div>
+            <motion.div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center"
+              initial={{ y: -10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true , amount: 0.5}}
+              transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.15 }}>
+              <Image src='/express.svg' width={70} height={70} alt='mongodb' className='invert' />
+            </motion.div>
+            <motion.div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center"
+              initial={{ y: -10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true , amount: 0.5}}
+              transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.2 }}>
+              <Image src='/react.svg' width={70} height={70} alt='mongodb' />
+            </motion.div>
+            <motion.div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center"
+              initial={{ y: -10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true , amount: 0.5}}
+              transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.25 }}>
+              <Image src='/node.svg' width={70} height={70} alt='mongodb' />
+            </motion.div>
+            <motion.div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center"
+              initial={{ y: -10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true , amount: 0.5}}
+              transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.3 }}>
+              <Image src='/firebase.svg' width={70} height={70} alt='mongodb' />
+            </motion.div>
+            <motion.div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center"
+              initial={{ y: -10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true , amount: 0.5}}
+              transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.35 }}>
+              <Image src='/html.svg' width={70} height={70} alt='mongodb' className='relative top-1' />
+            </motion.div>
+            <motion.div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center"
+              initial={{ y: -10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true , amount: 0.5}}
+              transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.4 }}>
+              <Image src='/css.svg' width={70} height={70} alt='mongodb' className='relative top-1' />
+            </motion.div>
+            <motion.div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center"
+              initial={{ y: -10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true , amount: 0.5}}
+              transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.45 }}>
+              <Image src='/jest.svg' width={70} height={70} alt='mongodb' />
+            </motion.div>
+            <motion.div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center"
+              initial={{ y: -10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true , amount: 0.5}}
+              transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.5 }}>
+              <Image src='/socketio.svg' width={70} height={70} alt='mongodb' />
+            </motion.div>
+            <motion.div className="bubble rounded-full bg-primary-green w-28 h-28 flex flex-col items-center justify-center"
+              initial={{ y: -10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true , amount: 0.5}}
+              transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.55 }}>
+              <Image src='/java.svg' width={70} height={70} alt='mongodb' />
+            </motion.div>
+          </MotionConfig>
         </div>
       </section>
 

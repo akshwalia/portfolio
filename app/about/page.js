@@ -4,6 +4,7 @@ import Image from 'next/image'
 import localFont from 'next/font/local'
 import { useState } from "react"
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
 
 const acorn = localFont({ src: '../fonts/Acorn-Bold.woff2' });
 
@@ -13,14 +14,24 @@ export default function About() {
         <main>
             <section className='flex flex-col items-center justify-center my-20' id='home'>
                 <div className='flex flex-col items-center justify-center px-[15vh] py-[2vh] relative w-fit'>
-                    <h1 className={`${acorn.className} text-primary-green text-9xl`}>I&apos;m Aksh.</h1>
+                    <motion.h1
+                        className={`${acorn.className} text-primary-green text-9xl`}
+                        initial={{ y: -30, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.3, ease: 'easeIn' }}>
+                        I&apos;m Aksh.
+                    </motion.h1>
 
                 </div>
             </section>
 
             <section className='flex justify-center mb-11 mx-5'>
                 <div className='flex justify-between gap-16 max-w-[1250px] w-full'>
-                    <div className="left relative">
+                    <motion.div
+                        className="left relative"
+                        initial={{ y: -30, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.3, ease: 'easeIn', delay: 0.15 }}>
                         <div className='relative'>
                             <Image src='/aksh3.jpg' width={370} height={800} alt='Aksh' className='rounded-tr-full rounded-tl-full' />
                             <div className='bg-primary-green h-20 w-full absolute bottom-0 flex justify-start items-center gap-5 px-6'>
@@ -31,23 +42,29 @@ export default function About() {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="right flex-2.5 pt-7">
+                    </motion.div>
+                    <motion.div
+                        className="right flex-2.5 pt-7"
+                        initial={{ y: -30, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.3, ease: 'easeIn', delay: 0.2 }}>
                         <h2 className={`${acorn.className} text-primary-green text-6xl`}>I&apos;m a second-year Computer Science Engineering student at Delhi Technological University, India.</h2>
                         <p className='text-primary-green text-xl my-5'>Self-taught Full Stack Developer continuously embracing new technologies to expand my skill set. Passionate about crafting seamless digital experiences, I thrive on the dynamic nature of web development.</p>
                         <p className='text-primary-green text-xl'>Open to freelance opportunities, I bring a dedication to learning and a knack for leveraging diverse technologies to create impactful solutions.</p>
-                    </div>
+                    </motion.div>
                 </div>
             </section >
 
             <section className='mx-10 flex flex-col gap-5 mb-28'>
-                <div className="workbubble bg-primary-green rounded-full text-white flex justify-between items-center w-[30vw] px-7 py-4 self-end">
+                <motion.div className="workbubble bg-primary-green rounded-full text-white flex justify-between items-center w-[30vw] px-7 py-4 self-end"
+                initial={{scaleY: 0}}
+                animate={{scaleY: 1}}>
                     <div>
                         <p className='font-bold text-xl'>Fresources</p>
                         <p className='text-xl'>Academic Team Member</p>
                     </div>
                     <div className={`${acorn.className} text-2xl`}>23~</div>
-                </div>
+                </motion.div>
                 <div className="workbubble bg-primary-green rounded-full text-white justify-between flex items-center w-[60vw] px-7 py-4">
                     <div>
                         <p className='font-bold text-xl'>Desh Ke Mentor</p>
@@ -105,16 +122,16 @@ export default function About() {
 
             <section className='flex gap-10 justify-center'>
                 <div className='relative overflow-hidden'>
-                    <Image src='/fog.jpg' width={350} height={281} alt='fog' className='rounded-2xl' onMouseOver={() => setShowLocation(1)} onMouseOut={()=> setShowLocation(0)} />
-                    <p className={`bg-[#ffffff5d] py-1 px-3 rounded-xl absolute left-5 -bottom-10 transition-transform ${clsx(showLocation==1 && '-translate-y-[60px]')}`}>Delhi, India</p>
+                    <Image src='/fog.jpg' width={350} height={281} alt='fog' className='rounded-2xl' onMouseOver={() => setShowLocation(1)} onMouseOut={() => setShowLocation(0)} />
+                    <p className={`bg-[#ffffff5d] py-1 px-3 rounded-xl absolute left-5 -bottom-10 transition-transform ${clsx(showLocation == 1 && '-translate-y-[60px]')}`}>Delhi, India</p>
                 </div>
                 <div className='relative overflow-hidden'>
-                    <Image src='/diya.jpg' width={350} height={281} alt='diya' className='rounded-2xl' onMouseOver={() => setShowLocation(2)} onMouseOut={()=> setShowLocation(0)} />
-                    <p className={`bg-[#ffffff5d] py-1 px-3 rounded-xl absolute left-5 -bottom-10 transition-transform ${clsx(showLocation==2 && '-translate-y-[60px]')}`}>Dehradun, India</p>
+                    <Image src='/diya.jpg' width={350} height={281} alt='diya' className='rounded-2xl' onMouseOver={() => setShowLocation(2)} onMouseOut={() => setShowLocation(0)} />
+                    <p className={`bg-[#ffffff5d] py-1 px-3 rounded-xl absolute left-5 -bottom-10 transition-transform ${clsx(showLocation == 2 && '-translate-y-[60px]')}`}>Dehradun, India</p>
                 </div>
                 <div className='relative overflow-hidden'>
-                    <Image src='/clock.jpg' width={350} height={281} alt='clock' className='rounded-2xl' onMouseOver={() => setShowLocation(3)} onMouseOut={()=> setShowLocation(0)} />
-                    <p className={`bg-[#ffffff5d] py-1 px-3 rounded-xl absolute left-5 -bottom-10 transition-transform ${clsx(showLocation==3 && '-translate-y-[60px]')}`}>Dehradun, India</p>
+                    <Image src='/clock.jpg' width={350} height={281} alt='clock' className='rounded-2xl' onMouseOver={() => setShowLocation(3)} onMouseOut={() => setShowLocation(0)} />
+                    <p className={`bg-[#ffffff5d] py-1 px-3 rounded-xl absolute left-5 -bottom-10 transition-transform ${clsx(showLocation == 3 && '-translate-y-[60px]')}`}>Dehradun, India</p>
                 </div>
             </section>
         </main>
