@@ -97,7 +97,7 @@ ul .navbarSelected {
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-3px);
   transition-property: box-shadow, transform;
   transition-duration: 0.4s, 0.4s;
   transition-timing-function: ease, ease;
@@ -121,16 +121,16 @@ ul .navbarSelected {
 }
 
 .card:hover .cardImage {
-  transform: translateY(15px);
+  transform: translateY(20px);
   transition: transform 0.4s ease;
 }
 
-.icons>div {
+.bubble {
   cursor: pointer;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.icons>div:hover {
+.bubble:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 40px rgba(33, 33, 33, 0.275);
   transition: box-shadow 0.3s ease, transform 0.3s ease;

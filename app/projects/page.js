@@ -4,10 +4,18 @@ import localFont from 'next/font/local'
 import Image from 'next/image'
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
+import { useStore } from '@/store';
+import { useEffect } from 'react';
 
 const acorn = localFont({ src: '../fonts/Acorn-Bold.woff2' });
 
 export default function Projects() {
+    const setSelected = useStore(state => state.setSelected);
+
+    useEffect(() => {
+        setSelected(3);
+    }, []);
+
     return (
         <main>
             <section className='flex flex-col items-center justify-center my-28' id='home'>
@@ -30,7 +38,10 @@ export default function Projects() {
                     transition={{ duration: 0.3, ease: 'easeIn', delay: 0.2 }}>A collection of tools and sites I&apos;ve created, designed to be helpful, fun, & sometimes just a little bit weird.</motion.p>
             </section>
 
-            <section className='grid grid-cols-3 h-[500px] mx-11 gap-7'>
+            <motion.section className='grid grid-cols-3 h-[500px] mx-11 gap-7'
+                initial={{ y: -30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.3, ease: 'easeIn', delay: 0.6 }}>
                 <div className="left border-solid flex flex-col gap-7">
                     <a href="https://chat-it-temp.vercel.app/" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl py-2 px-8 flex items-center justify-center">
                         <div className='flex justify-between items-center'>
@@ -94,7 +105,7 @@ export default function Projects() {
                         </div>
                     </a>
                 </div>
-            </section>
+            </motion.section>
         </main>
     )
 }

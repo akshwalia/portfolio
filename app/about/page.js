@@ -2,14 +2,23 @@
 
 import Image from 'next/image'
 import localFont from 'next/font/local'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
+import { useStore } from "@/store";
 
 const acorn = localFont({ src: '../fonts/Acorn-Bold.woff2' });
 
 export default function About() {
     const [showLocation, setShowLocation] = useState(0);
+
+    const setSelected = useStore(state => state.setSelected);
+    const nowPlaying = useStore(state => state.nowPlaying);
+    
+    useEffect(() => {
+        setSelected(2);
+    }, [])
+
     return (
         <main>
             <section className='flex flex-col items-center justify-center my-20' id='home'>
@@ -37,8 +46,8 @@ export default function About() {
                             <div className='bg-primary-green h-20 w-full absolute bottom-0 flex justify-start items-center gap-5 px-6'>
                                 <Image src='/Spotify-white.svg' width={50} height={50} alt='spotify' className='rounded-full opacity-40' />
                                 <div className='flex flex-col justify-center h-full text-white opacity-75'>
-                                    <p className='text-sm text-white'>Currently listening to</p>
-                                    <p className={`${acorn.className} text-lg`}>The Beatles</p>
+                                    <p className='text-sm text-white'>{nowPlaying ? 'Currently listening to' : 'On a break'}</p>
+                                    <p className={`${acorn.className} text-lg`}>{nowPlaying?nowPlaying.title:''}</p>
                                 </div>
                             </div>
                         </div>
