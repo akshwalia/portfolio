@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import { useStore } from "@/store";
+import Link from 'next/link';
 
 const acorn = localFont({ src: '../fonts/Acorn-Bold.woff2' });
 
@@ -14,7 +15,7 @@ export default function About() {
 
     const setSelected = useStore(state => state.setSelected);
     const nowPlaying = useStore(state => state.nowPlaying);
-    
+
     useEffect(() => {
         setSelected(2);
     }, [])
@@ -45,10 +46,12 @@ export default function About() {
                             <Image src='/aksh3.jpg' width={370} height={800} alt='Aksh' className='rounded-tr-full rounded-tl-full' />
                             <div className='bg-primary-green h-20 w-full absolute bottom-0 flex justify-start items-center gap-5 px-6'>
                                 <Image src='/Spotify-white.svg' width={50} height={50} alt='spotify' className='rounded-full opacity-40' />
-                                <div className='flex flex-col justify-center h-full text-white opacity-75'>
-                                    <p className='text-sm text-white'>{nowPlaying ? 'Currently listening to' : 'On a break'}</p>
-                                    <p className={`${acorn.className} text-lg`}>{nowPlaying?nowPlaying.title:''}</p>
-                                </div>
+                                <Link href={nowPlaying.songUrl || 'https://youtu.be/dQw4w9WgXcQ?si=coC3Y8j3gbuuPeoq'}>
+                                    <div className='flex flex-col justify-center h-full text-white opacity-75'>
+                                        <p className='text-sm text-white'>{nowPlaying ? 'Currently listening to' : 'On a break'}</p>
+                                        <p className={`${acorn.className} text-lg`}>{nowPlaying ? nowPlaying.title : ''}</p>
+                                    </div>
+                                </Link>
                             </div>
                         </div>
                     </motion.div>
@@ -66,8 +69,8 @@ export default function About() {
 
             <section className='mx-10 flex flex-col gap-5 mb-28'>
                 <motion.div className="workbubble bg-primary-green rounded-full text-white flex justify-between items-center w-[30vw] px-7 py-4 self-end"
-                initial={{scaleY: 0}}
-                animate={{scaleY: 1}}>
+                    initial={{ scaleY: 0 }}
+                    animate={{ scaleY: 1 }}>
                     <div>
                         <p className='font-bold text-xl'>Fresources</p>
                         <p className='text-xl'>Academic Team Member</p>
