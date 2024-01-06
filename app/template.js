@@ -7,6 +7,7 @@ import Image from "next/image";
 import localFont from 'next/font/local'
 import { useStore } from "../store";
 import getNowPlayingItem from "./getCurrentlyPlaying";
+import Preloader from "./components/preloader";
 
 const acorn = localFont({ src: './fonts/Acorn-Bold.woff2' });
 
@@ -18,6 +19,7 @@ export default function Template({ children }) {
     const nowPlaying = useStore(state => state.nowPlaying);
     const setLoading = useStore(state => state.setLoading);
     const setNowPlaying = useStore(state => state.setNowPlaying);
+    const loading = useStore(state => state.loading);
 
     useEffect(() => {
 
@@ -60,7 +62,7 @@ export default function Template({ children }) {
                     </ul>
                 </div>
             </nav>
-            {children}
+            {loading?<Preloader/>: children}
             <footer className='flex justify-center my-28' id='contact'>
                 <div className='max-w-[900px] w-full flex gap-24'>
                     <div className="left flex-2 flex flex-col gap-9 w-full">
@@ -68,7 +70,7 @@ export default function Template({ children }) {
                             <div className="spotify flex justify-start items-center gap-4 bg-[#ffffffc7] rounded-[60px] px-5 py-1 w-full h-[90px]">
                                 <Image src={'/spotify.svg'} width={50} height={50} alt='spotify' />
                                 <div className='flex flex-col justify-center h-full text-primary-green'>
-                                    <p className='text-sm text-primary-green -mb-1'>{nowPlaying ? 'Currently listening to' : 'On a break'}</p>
+                                    <p className='text-sm text-primary-green'>{nowPlaying ? 'Currently listening to' : 'On a break'}</p>
                                     <h3 className={`font-bold text-lg`}>{nowPlaying.title || ''}</h3>
                                     <p className="text-xs -mt-2">{nowPlaying.artist}</p>
                                 </div>
