@@ -4,7 +4,6 @@
 
 html {
   scroll-behavior: smooth;
-  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -83,7 +82,7 @@ ul .navbarSelected {
 
 .star {
   animation: twinkle 3s infinite ;
-  animation-delay: 3.5s;
+  animation-delay: 2.5s;
 }
 
 

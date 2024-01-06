@@ -25,7 +25,7 @@ export default function About() {
             <section className='flex flex-col items-center justify-center my-20' id='home'>
                 <div className='flex flex-col items-center justify-center px-[15vh] py-[2vh] relative w-fit'>
                     <motion.h1
-                        className={`${acorn.className} text-primary-green text-9xl`}
+                        className={`${acorn.className} text-primary-green text-[8.7vw]`}
                         initial={{ y: -30, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.3, ease: 'easeIn' }}>
@@ -121,7 +121,7 @@ export default function About() {
             <section className='flex flex-col items-center justify-center mb-20'>
                 <div className='max-w-[700px] flex flex-col gap-7'>
                     <div className='text-primary-green text-xl'>
-                        Back when I began coding, Java was like my first language in the tech world. It got me curious about how stuff worked behind the scenes on computers. But then, I stumbled onto web development—a whole new world that caught my attention.
+                        Back when I began coding, Java was my first language in the tech world. It got me curious about how stuff worked behind the scenes on computers. But then, I stumbled onto web development—a whole new world that caught my attention.
                     </div>
                     <div className='text-primary-green text-xl'>
                         Building websites became my thing. It wasn&apos;t just about making things work; it was about making them look cool and easy to use. It was like painting with pixels and code.

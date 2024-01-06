@@ -20,7 +20,7 @@ export default function Projects() {
         <main>
             <section className='flex flex-col items-center justify-center my-28' id='home'>
                 <div className='flex flex-col items-center justify-center px-[15vh] py-[2vh] relative w-fit'>
-                    <motion.h1 className={`${acorn.className} text-primary-green text-9xl`}
+                    <motion.h1 className={`${acorn.className} text-primary-green text-[8.7vw]`}
                         initial={{ y: -30, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.3, ease: 'easeIn' }}>Play.</motion.h1>
@@ -41,7 +41,7 @@ export default function Projects() {
             <motion.section className='grid grid-cols-3 h-[500px] mx-11 gap-7'
                 initial={{ y: -30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.3, ease: 'easeIn', delay: 0.6 }}>
+                transition={{ duration: 0.3, ease: 'easeIn', delay: 0.4 }}>
                 <div className="left border-solid flex flex-col gap-7">
                     <a href="https://chat-it-temp.vercel.app/" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl py-2 px-8 flex items-center justify-center">
                         <div className='flex justify-between items-center'>
