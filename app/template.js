@@ -70,9 +70,9 @@ export default function Template({ children }) {
                             <div className="spotify flex justify-start items-center gap-4 bg-[#ffffffc7] rounded-[60px] px-5 py-1 w-full h-[90px]">
                                 <Image src={'/spotify.svg'} width={50} height={50} alt='spotify' className="opacity-90" />
                                 <div className='flex flex-col justify-center h-full text-primary-green'>
-                                    <p className='text-sm text-primary-green opacity-90'>{nowPlaying ? 'Currently listening to' : 'On a break'}</p>
-                                    <h3 className={`font-bold text-base sm:text-lg opacity-95`}>{nowPlaying.title || ''}</h3>
-                                    <p className="text-xs -mt-2 opacity-95">{nowPlaying.artist}</p>
+                                    <p className='text-xs sm:text-sm text-primary-green opacity-90'>{nowPlaying ? 'Currently listening to' : 'On a break'}</p>
+                                    <h3 className={`font-bold text-sm sm:text-lg opacity-95 mb-[3px]`}>{nowPlaying.title || ''}</h3>
+                                    <p className="text-[0.60rem] sm:text-xs -mt-2 opacity-95">{nowPlaying.artist}</p>
                                 </div>
                             </div>
                         </Link>
