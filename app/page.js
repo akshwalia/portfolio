@@ -13,13 +13,6 @@ import { useStore } from '@/store';
 const acorn = localFont({ src: './fonts/Acorn-Bold.woff2' });
 
 export default function Home() {
-//   const loading = useStore(state => state.loading);
-
-//   if(loading) return (
-//     <div className='flex justify-center items-center h-screen w-screen'>
-//         <Image src='/pokeball.png' width={200} height={200} alt='logo' />
-//     </div>
-// )
 
   return (
     <main>
