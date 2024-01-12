@@ -99,7 +99,7 @@ export default function Projects() {
                     </a>
                     <a href="https://akshwalia.github.io/Etch-a-sketch/" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl p-8 relative overflow-hidden">
                         <div className='min-h-[200px] md:h-auto '>
-                            <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-2'>To-Do List</h4>
+                            <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-2'>Etch-a-sketch</h4>
                             <p className='text-primary-green opacity-90 mb-3'> Pixel art unleashed!</p>
                             <Image src='/etchasketch.png' width={200} height={250} alt='tictactoe' className='flex-grow-0 flex-shrink-0 absolute rounded-lg left-0 right-0 ml-auto mr-auto' />
                         </div>
