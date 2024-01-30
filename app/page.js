@@ -38,14 +38,14 @@ export default function Home() {
             initial={{ transform: 'scale(0)' }}
             animate={{ transform: 'scale(1)' }}
             transition={{ duration: 1, ease: 'backInOut', delay: 0.5 }}>
-            <Image src='/star.svg' alt='star' width={65} height={65} className='scale-50 sm:scale-100'/>
+            <Image src='/star.svg' alt='star' width={65} height={65} className='scale-50 sm:scale-100' />
           </motion.div>
           <motion.div
             className='absolute right-0 top-0 star w-[60px] h-[60px]'
             initial={{ transform: 'scale(0)' }}
             animate={{ transform: 'scale(1)' }}
             transition={{ duration: 1, ease: 'backInOut', delay: 0.5 }}>
-            <Image src='/star.svg' alt='star' width={65} height={65} className='scale-50 sm:scale-100'/>
+            <Image src='/star.svg' alt='star' width={65} height={65} className='scale-50 sm:scale-100' />
           </motion.div>
         </div>
         <motion.p
@@ -62,18 +62,18 @@ export default function Home() {
         initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.3, ease: 'easeIn', delay: 0.2 }}>
-        <a href="https://akshwalia.github.io/calculator/" rel='_blank' className='flex-1' target='_blank'>
+        <a href="https://metaversus-akshwalia.vercel.app" rel='_blank' className='flex-1' target='_blank'>
           <div className="card h-[300px] sm:h-[420px] md:h-[450px] bg-[#df70eb94] rounded-[60px] text-right p-10 text-slate-800 relative overflow-hidden">
-            <p className='text-base sm:text-lg'>Javascript</p>
-            <h3 className={`${acorn.className} text-2xl sm:text-4xl lg:text-5xl`}>Calculator</h3>
-            <Image src='/calculator.png' width={250} height={250} alt='Calculator' className='cardImage absolute -bottom-52 sm:-bottom-24 left-5 rounded-br-3xl' />
+            <p className='text-base sm:text-lg'>Next.js, Tailwind, Framer Motion</p>
+            <h3 className={`${acorn.className} text-2xl sm:text-4xl lg:text-5xl`}>Metaversus</h3>
+            <Image src='/metaversus.png' width={260} height={250} alt='Calculator' className='cardImage absolute -bottom-52 sm:-bottom-24 left-5 rounded-br-3xl' />
           </div>
         </a>
         <a href="https://chat-it-temp.vercel.app/" className='flex-1.75' target='_blank'>
           <div className="card flex-1.75 h-[300px] sm:h-[420px] md:h-[450px] bg-[#67dcd2a7] rounded-[60px] text-right p-10 text-slate-800 relative overflow-hidden">
             <p className='text-base sm:text-lg'>ReactJs, MongoDB, Express</p>
             <h3 className={`${acorn.className} text-2xl sm:text-4xl lg:text-5xl`}>Chat It</h3>
-            <Image src='/chatit.png' width={800} height={446} alt='Chat It' className='cardImage absolute -bottom-12 w-[400px] sm:-bottom-32 md:-bottom-44 sm:w-[800px] -right-8 rounded-br-3xl' />
+            <Image src='/chatit.png' width={1500} height={800} alt='Chat It' className='cardImage absolute -bottom-12 w-[400px] sm:-bottom-32 md:-bottom-44 sm:w-[800px] -right-8 rounded-br-3xl' />
           </div>
         </a>
       </motion.section>
@@ -82,14 +82,14 @@ export default function Home() {
           <div className="card flex-1.5 h-[300px] sm:h-[420px] md:h-[450px] bg-[#a5764f91] rounded-[60px] text-right p-10 text-slate-800 relative overflow-hidden">
             <p className='text-base sm:text-lg'>Javascript</p>
             <h3 className={`${acorn.className} text-2xl sm:text-4xl lg:text-5xl`}>Weather App</h3>
-            <Image src='/weather.png' width={800} height={800} alt='weather' className='cardImage absolute -bottom-12 w-[400px] sm:-bottom-32 md:-bottom-44 sm:w-[800px]  rounded-br-3xl' />
+            <Image src='/weather.png' width={1500} height={800} alt='weather' className='cardImage absolute -bottom-12 w-[400px] sm:-bottom-32 md:-bottom-44 sm:w-[800px]  rounded-br-3xl' />
           </div>
         </a>
         <a href="http://where-pikachu.vercel.app/" className='flex-1' target='_blank'>
           <div className="card flex-1 h-[300px] sm:h-[420px] md:h-[450px] bg-[#70beeb7e] rounded-[60px] text-right p-10 text-slate-800 relative overflow-hidden">
             <p className='text-base sm:text-lg'>ReactJS, MongoDB, Express</p>
             <h3 className={`${acorn.className} text-2xl sm:text-4xl lg:text-5xl`}>Where&apos;s <br /> Pikachu</h3>
-            <Image src='/pikachu.png' width={350} height={350} alt='chatit' className='cardImage absolute -bottom-44 2xl:w-[350px] w-[230px] sm:w-[350px] lg:w-[280px] left-0 rounded-br-3xl' />
+            <Image src='/pikachu.png' width={550} height={450} alt='chatit' className='cardImage absolute -bottom-44 2xl:w-[300px] w-[200px] sm:w-[300px] lg:w-[280px] sm:left-5 md:-bottom-56 rounded-br-3xl' />
           </div>
         </a>
       </section>
@@ -117,14 +117,14 @@ export default function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.4, ease: 'easeInOut', delay: 0 }}>
-              <Image src='/nextjs.svg' width={70} height={70} alt='mongodb' className='w-[45px] sm:w-[70px]'/>
+              <Image src='/nextjs.svg' width={70} height={70} alt='mongodb' className='w-[45px] sm:w-[70px]' />
             </motion.div>
             <motion.div className="bubble rounded-full bg-primary-green w-20 sm:w-28 h-20 sm:h-28 flex flex-col items-center justify-center"
               initial={{ y: -10, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.05 }}>
-              <Image src='/tailwind.svg' width={70} height={70} alt='mongodb' className='w-[45px] sm:w-[70px]'/>
+              <Image src='/tailwind.svg' width={70} height={70} alt='mongodb' className='w-[45px] sm:w-[70px]' />
             </motion.div>
             <motion.div className="bubble rounded-full bg-primary-green w-20 sm:w-28 h-20 sm:h-28 flex flex-col items-center justify-center"
               initial={{ y: -10, opacity: 0 }}
@@ -145,21 +145,28 @@ export default function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.2 }}>
-              <Image src='/react.svg' width={70} height={70} alt='mongodb' className='w-[45px] sm:w-[70px]'/>
+              <Image src='/react.svg' width={70} height={70} alt='mongodb' className='w-[45px] sm:w-[70px]' />
             </motion.div>
             <motion.div className="bubble rounded-full bg-primary-green w-20 sm:w-28 h-20 sm:h-28 flex flex-col items-center justify-center"
               initial={{ y: -10, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.25 }}>
-              <Image src='/node.svg' width={70} height={70} alt='mongodb' className='w-[45px] sm:w-[70px]'/>
+              <Image src='/node.svg' width={70} height={70} alt='mongodb' className='w-[45px] sm:w-[70px]' />
+            </motion.div>
+            <motion.div className="bubble rounded-full bg-primary-green w-20 sm:w-28 h-20 sm:h-28 flex flex-col items-center justify-center"
+              initial={{ y: -10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.55 }}>
+              <Image src='/redux.svg' width={70} height={70} alt='mongodb' className='w-[45px] sm:w-[70px]' />
             </motion.div>
             <motion.div className="bubble rounded-full bg-primary-green w-20 sm:w-28 h-20 sm:h-28 flex flex-col items-center justify-center"
               initial={{ y: -10, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.3 }}>
-              <Image src='/firebase.svg' width={70} height={70} alt='mongodb' className='w-[45px] sm:w-[70px]'/>
+              <Image src='/firebase.svg' width={70} height={70} alt='mongodb' className='w-[45px] sm:w-[70px]' />
             </motion.div>
             <motion.div className="bubble rounded-full bg-primary-green w-20 sm:w-28 h-20 sm:h-28 flex flex-col items-center justify-center"
               initial={{ y: -10, opacity: 0 }}
@@ -180,22 +187,23 @@ export default function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.45 }}>
-              <Image src='/jest.svg' width={70} height={70} alt='mongodb' className='w-[45px] sm:w-[70px]'/>
+              <Image src='/jest.svg' width={70} height={70} alt='mongodb' className='w-[45px] sm:w-[70px]' />
             </motion.div>
             <motion.div className="bubble rounded-full bg-primary-green w-20 sm:w-28 h-20 sm:h-28 flex flex-col items-center justify-center"
               initial={{ y: -10, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.5 }}>
-              <Image src='/socketio.svg' width={70} height={70} alt='mongodb' className='w-[45px] sm:w-[70px]'/>
+              <Image src='/socketio.svg' width={70} height={70} alt='mongodb' className='w-[45px] sm:w-[70px]' />
             </motion.div>
             <motion.div className="bubble rounded-full bg-primary-green w-20 sm:w-28 h-20 sm:h-28 flex flex-col items-center justify-center"
               initial={{ y: -10, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.55 }}>
-              <Image src='/java.svg' width={70} height={70} alt='mongodb' className='w-[45px] sm:w-[70px]'/>
+              <Image src='/java.svg' width={70} height={70} alt='mongodb' className='w-[45px] sm:w-[70px]' />
             </motion.div>
+
           </MotionConfig>
         </div>
       </section>

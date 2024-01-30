@@ -29,7 +29,7 @@ export default function Projects() {
                         initial={{ transform: 'scale(0)' }}
                         animate={{ transform: 'scale(1)' }}
                         transition={{ duration: 1, ease: 'backInOut', delay: 0.3 }}>
-                        <Image src='/star.svg' alt='star' width={65} height={65} className='scale-[60%] md:scale-100'/>
+                        <Image src='/star.svg' alt='star' width={65} height={65} className='scale-[60%] md:scale-100' />
                     </motion.div>
                 </div>
                 <motion.p className='text-base md:text-xl text-primary-green max-w-[700px] text-center mt-8'
@@ -61,6 +61,15 @@ export default function Projects() {
                     </a>
                 </div>
                 <div className="centre border-solid flex flex-col gap-7">
+                    <a href="https://metaversus-akshwalia.vercel.app" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl flex justify-between py-2 px-8 items-center">
+                        <div className='flex justify-between items-center py-3 md:py-0'>
+                            <div className='h-full flex flex-col flex-1 justify-center'>
+                                <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-2'>Metaversus</h4>
+                                <p className='text-primary-green opacity-90'> An immersive frontend project that transports you beyond reality using Next.js, Tailwind CSS, and Framer Motion.</p>
+                            </div>
+                            <Image src='/planet.png' width={150} height={150} alt='greatball' className='flex-grow-0 flex-shrink-0 -mr-7' />
+                        </div>
+                    </a>
                     <a href="https://pokemon-memory-card.vercel.app/" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl flex justify-between py-2 px-8 items-center">
                         <div className='flex justify-between items-center py-3 md:py-0'>
                             <div className='h-full flex flex-col flex-1 justify-center'>
@@ -79,15 +88,7 @@ export default function Projects() {
                             <Image src='/greatball.png' width={100} height={0} alt='greatball' className='flex-grow-0 flex-shrink-0 h-[100px]' />
                         </div>
                     </a>
-                    <a href="https://akshwalia.github.io/JS-Drum-Kit/" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl flex justify-between py-2 px-8 items-center">
-                        <div className='flex justify-between items-center py-3 md:py-0'>
-                            <div className='h-full flex flex-col flex-1 justify-center'>
-                                <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-2'>Drum Kit</h4>
-                                <p className='text-primary-green opacity-90'> Experience drums at your fingertips! Tap keys for instant drum sounds on our interactive website.</p>
-                            </div>
-                            <Image src='/drumkit.png' width={100} height={0} alt='greatball' className='flex-grow-0 flex-shrink-0 h-[100px]' />
-                        </div>
-                    </a>
+
                 </div>
                 <div className="right border-solid flex flex-col gap-7 md:col-span-2 md:flex-row xl:col-span-1 xl:flex-col">
                     <a href="https://akshwalia.github.io/tic-tac-toe/" target='_blank' className="projectcard bg-[#ffffff60] flex-1.5 md:flex-1 xl:flex-1.5 rounded-3xl p-8 relative overflow-hidden">
