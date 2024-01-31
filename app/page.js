@@ -66,7 +66,7 @@ export default function Home() {
           <div className="card h-[300px] sm:h-[420px] md:h-[450px] bg-[#df70eb94] rounded-[60px] text-right p-10 text-slate-800 relative overflow-hidden">
             <p className='text-base sm:text-lg'>Next.js, Tailwind, Framer Motion</p>
             <h3 className={`${acorn.className} text-2xl sm:text-4xl lg:text-5xl`}>Metaversus</h3>
-            <Image src='/metaversus.png' width={260} height={250} alt='Calculator' className='cardImage absolute -bottom-52 sm:-bottom-24 left-5 rounded-br-3xl' />
+            <Image src='/metaversus.png' width={260} height={250} alt='Metvversus' className='cardImage w-[240px] sm:w-[260px] absolute -bottom-52 sm:-bottom-24 left-5 rounded-br-3xl' />
           </div>
         </a>
         <a href="https://chat-it-temp.vercel.app/" className='flex-1.75' target='_blank'>
@@ -89,7 +89,7 @@ export default function Home() {
           <div className="card flex-1 h-[300px] sm:h-[420px] md:h-[450px] bg-[#70beeb7e] rounded-[60px] text-right p-10 text-slate-800 relative overflow-hidden">
             <p className='text-base sm:text-lg'>ReactJS, MongoDB, Express</p>
             <h3 className={`${acorn.className} text-2xl sm:text-4xl lg:text-5xl`}>Where&apos;s <br /> Pikachu</h3>
-            <Image src='/pikachu.png' width={550} height={450} alt='chatit' className='cardImage absolute -bottom-44 2xl:w-[300px] w-[200px] sm:w-[300px] lg:w-[280px] sm:left-5 md:-bottom-56 rounded-br-3xl' />
+            <Image src='/pikachu.png' width={550} height={450} alt='chatit' className='cardImage absolute left-2 -bottom-48 2xl:w-[300px] w-[200px] sm:w-[300px] lg:w-[280px] sm:left-5 md:-bottom-56 rounded-br-3xl' />
           </div>
         </a>
       </section>
