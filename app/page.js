@@ -64,7 +64,7 @@ export default function Home() {
         transition={{ duration: 0.3, ease: 'easeIn', delay: 0.2 }}>
         <a href="https://metaversus-akshwalia.vercel.app" rel='_blank' className='flex-1' target='_blank'>
           <div className="card h-[300px] sm:h-[420px] md:h-[450px] bg-[#df70eb94] rounded-[60px] text-right p-10 text-slate-800 relative overflow-hidden">
-            <p className='text-base sm:text-lg'>Next.js, Tailwind, Framer Motion</p>
+            <p className='text-[13px] sm:text-lg'>Next.js, Tailwind, Framer Motion</p>
             <h3 className={`${acorn.className} text-2xl sm:text-4xl lg:text-5xl`}>Metaversus</h3>
             <Image src='/metaversus.png' width={260} height={250} alt='Metvversus' className='cardImage w-[240px] sm:w-[260px] absolute -bottom-52 sm:-bottom-24 left-5 rounded-br-3xl' />
           </div>
