@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <body className={`${nunito.className} bg-primary-yellow`}>
         {children}
       </body>
-      <GoogleAnalytics gaId="G-F9YJPGNJ65" />
+      <GoogleAnalytics gaId="G-2M77D3LYY1" />
     </html>
   )
 }
