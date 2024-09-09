@@ -44,14 +44,19 @@ export default function About() {
                         transition={{ duration: 0.3, ease: 'easeIn', delay: 0.15 }}>
                         <div className='relative max-w-[370px] md:w-[30vw]'>
                             <Image src='/aksh3.jpg' width={370} height={800} alt='Aksh' className='rounded-tr-full rounded-tl-full md:h-[500px] object-cover object center' />
-                            <Link href={nowPlaying.songUrl || 'https://youtu.be/dQw4w9WgXcQ?si=coC3Y8j3gbuuPeoq'}>
+                            <Link href={nowPlaying.songUrl || 'https://open.spotify.com/user/31k6pgzdnag74vy767bu32ldeswi'}>
                                 <div className='bg-primary-green h-20 w-full absolute bottom-0 flex justify-start items-center gap-5 px-6 max-w-[370px]'>
                                     <Image src='/Spotify-white.svg' width={50} height={50} alt='spotify' className='rounded-full opacity-40' />
 
-                                    <div className='flex flex-col justify-center h-full text-white opacity-75'>
-                                        <p className='text-base text-white h-[23px] overflow-y-hidden'>{nowPlaying ? 'Currently listening to' : 'On a break'}</p>
-                                        <p className={`${acorn.className} text-lg h-[23px] overflow-y-hidden`}>{nowPlaying ? nowPlaying.title : ''}</p>
-                                    </div>
+                                    {nowPlaying ?
+                                        <div className='flex flex-col justify-center h-full text-white opacity-75'>
+                                            <p className='text-base text-white h-[23px] overflow-y-hidden'>{nowPlaying ? 'Currently listening to' : 'On a break'}</p>
+                                            <p className={`${acorn.className} text-lg h-[23px] overflow-y-hidden`}>{nowPlaying ? nowPlaying.title : ''}</p>
+                                        </div> :
+                                        <div className='flex flex-col justify-center h-full text-white opacity-75'>
+                                            <p className='text-lg text-white overflow-y-hidden'>On a break</p>
+                                        </div>
+                                    }
                                 </div>
                             </Link>
                         </div>
@@ -61,14 +66,14 @@ export default function About() {
                         initial={{ y: -30, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.3, ease: 'easeIn', delay: 0.2 }}>
-                        <h2 className={`${acorn.className} text-primary-green text-3xl sm:text-4xl md:text-[3.3vw]`}>I&apos;m a second-year Computer Science Engineering student at Delhi Technological University, India.</h2>
+                        <h2 className={`${acorn.className} text-primary-green text-3xl sm:text-4xl md:text-[3.3vw]`}>I&apos;m a third-year Computer Science Engineering student at Delhi Technological University, India.</h2>
                         <p className='text-primary-green text-base md:text-xl my-5'>Self-taught Full Stack Developer continuously embracing new technologies to expand my skill set. Passionate about crafting seamless digital experiences, I thrive on the dynamic nature of web development.</p>
                         <p className='text-primary-green text-base md:text-xl'>Open to freelance opportunities, I bring a dedication to learning and a knack for leveraging diverse technologies to create impactful solutions.</p>
                     </motion.div>
                 </div>
             </section >
 
-            <section className='mx-10 flex flex-col gap-5 mb-14 md:mb-28'>
+            {/* <section className='mx-10 flex flex-col gap-5 mb-14 md:mb-28'>
                 <motion.div className="workbubble bg-primary-green rounded-full text-white flex justify-between items-center w-full sm:w-[30vw] px-7 py-4 self-end"
                     initial={{ scaleY: 0 }}
                     animate={{ scaleY: 1 }}>
@@ -85,9 +90,9 @@ export default function About() {
                     </div>
                     <div className={`${acorn.className} text-2xl`}>22~23</div>
                 </div>
-            </section>
+            </section> */}
 
-            <section className='flex flex-col sm:pr-64 mb-11 mx-10'>
+            <section className='flex flex-col sm:pr-64 mb-11 mx-10 pt-10'>
                 <div className='self-end max-w-[800px]'>
                     <h3 className={`${acorn.className} text-primary-green text-2xl sm:text-[3vw] mb-5`}>Open to collaboration with a focus on sustainability, education, equality, or carbon neutrality.</h3>
                     <div className='max-w-[600px] text-primary-green opacity-95 text-base sm:text-xl'>

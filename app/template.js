@@ -66,7 +66,7 @@ export default function Template({ children }) {
             <footer className='flex justify-center my-28 mx-10' id='contact'>
                 <div className='max-w-[900px] w-full flex gap-10 sm:gap-24 flex-col sm:flex-row'>
                     <div className="left flex-2 flex flex-col gap-9 w-full">
-                        <Link href={nowPlaying.songUrl || 'https://youtu.be/dQw4w9WgXcQ?si=coC3Y8j3gbuuPeoq'} target="_blank">
+                        <Link href={nowPlaying.songUrl || 'https://open.spotify.com/user/31k6pgzdnag74vy767bu32ldeswi'} target="_blank">
                             <div className="spotify flex justify-start items-center gap-4 bg-[#ffffffc7] rounded-[60px] px-5 py-1 w-full h-[90px]">
                                 <Image src={'/spotify.svg'} width={50} height={50} alt='spotify' className="opacity-90" />
                                 <div className='flex flex-col justify-center h-full text-primary-green'>
