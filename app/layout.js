@@ -2,6 +2,7 @@
 import './globals.css'
 import { Nunito } from 'next/font/google';
 import localFont from 'next/font/local'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const nunito = Nunito({ subsets: ['latin'] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className={`${nunito.className} bg-primary-yellow`}>
         {children}
       </body>
+      <GoogleAnalytics gaId="G-2M77D3LYY1" />
     </html>
   )
 }
