@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import localFont from 'next/font/local'
 import { useStore } from "../store";
-import getNowPlayingItem, { getRecentlyPlayedItems } from "./getCurrentlyPlaying";
+import getNowPlayingItem from "./getCurrentlyPlaying";
 import Preloader from "./components/preloader";
 
 const acorn = localFont({ src: './fonts/Acorn-Bold.woff2' });
@@ -29,15 +29,8 @@ export default function Template({ children }) {
                 '1a0e5f8a157f48c8a6bd7c396181121b',
                 'AQAySRaTcGIXQihC8lfmNxnZEm46lFA3puKd4xLXnFpwYsRkoFXadHBg_R7c_8Bu4_cF3rVeWq8AHZPJ4D1inB1mYqOy9i9zD1DaVclR97AMSMbAht1pdEDN16uHBRjZA54'
             ),
-            getRecentlyPlayedItems(
-                '84ad7df739fe4534840ec0379140813a',
-                '1a0e5f8a157f48c8a6bd7c396181121b',
-                'AQAySRaTcGIXQihC8lfmNxnZEm46lFA3puKd4xLXnFpwYsRkoFXadHBg_R7c_8Bu4_cF3rVeWq8AHZPJ4D1inB1mYqOy9i9zD1DaVclR97AMSMbAht1pdEDN16uHBRjZA54'
-            )
         ]).then((results) => {
-            console.log(results)
             console.log(results[0]);
-            console.log("Recently played: "+results[1]);
             setNowPlaying(results[0]);
             setLoading(false);
         });

@@ -61,14 +61,14 @@ export default function About() {
                         initial={{ y: -30, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.3, ease: 'easeIn', delay: 0.2 }}>
-                        <h2 className={`${acorn.className} text-primary-green text-3xl sm:text-4xl md:text-[3.3vw]`}>I&apos;m a third-year Computer Science Engineering student at Delhi Technological University, India.</h2>
+                        <h2 className={`${acorn.className} text-primary-green text-3xl sm:text-4xl md:text-[3.3vw]`}>I&apos;m a second-year Computer Science Engineering student at Delhi Technological University, India.</h2>
                         <p className='text-primary-green text-base md:text-xl my-5'>Self-taught Full Stack Developer continuously embracing new technologies to expand my skill set. Passionate about crafting seamless digital experiences, I thrive on the dynamic nature of web development.</p>
                         <p className='text-primary-green text-base md:text-xl'>Open to freelance opportunities, I bring a dedication to learning and a knack for leveraging diverse technologies to create impactful solutions.</p>
                     </motion.div>
                 </div>
             </section >
 
-            {/* <section className='mx-10 flex flex-col gap-5 mb-14 md:mb-28'>
+            <section className='mx-10 flex flex-col gap-5 mb-14 md:mb-28'>
                 <motion.div className="workbubble bg-primary-green rounded-full text-white flex justify-between items-center w-full sm:w-[30vw] px-7 py-4 self-end"
                     initial={{ scaleY: 0 }}
                     animate={{ scaleY: 1 }}>
@@ -85,7 +85,7 @@ export default function About() {
                     </div>
                     <div className={`${acorn.className} text-2xl`}>22~23</div>
                 </div>
-            </section> */}
+            </section>
 
             <section className='flex flex-col sm:pr-64 mb-11 mx-10'>
                 <div className='self-end max-w-[800px]'>
