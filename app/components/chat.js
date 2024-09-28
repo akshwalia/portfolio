@@ -58,7 +58,7 @@ const Option = ({ option, messages, setMessages, setCurrentOptions }) => {
                     if (index === newMessages.length - 1) {
                         resolve();
                     }
-                }, (index + 1) * 1000); // 1000ms (1 second) delay between each message
+                }, index === 0 ? 200 : (index * 800 + 200)); // 200ms for first, 1000ms for others
             });
         });
     };
