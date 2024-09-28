@@ -7,4 +7,6 @@ export const useStore = create((set) => ({
     setNowPlaying: (nowPlaying) => set({ nowPlaying: nowPlaying }),
     loading: true,
     setLoading: (loading) => set({ loading: loading }),
+    showContact: false,
+    setShowContact: (showContact) => set({ showContact: showContact }),
 }));

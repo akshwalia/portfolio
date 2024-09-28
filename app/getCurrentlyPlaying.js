@@ -18,7 +18,6 @@ const getAccessToken = async (client_id,client_secret,refresh_token) => {
         }),
     });
     const data = await response.json();
-    console.log(data);
     return data;
 };
 

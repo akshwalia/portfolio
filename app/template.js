@@ -8,6 +8,7 @@ import localFont from 'next/font/local'
 import { useStore } from "../store";
 import getNowPlayingItem from "./getCurrentlyPlaying";
 import Preloader from "./components/preloader";
+import Chat from "./components/chat";
 
 const acorn = localFont({ src: './fonts/Acorn-Bold.woff2' });
 
@@ -20,6 +21,8 @@ export default function Template({ children }) {
     const setLoading = useStore(state => state.setLoading);
     const setNowPlaying = useStore(state => state.setNowPlaying);
     const loading = useStore(state => state.loading);
+    const showContact = useStore(state => state.showContact);
+    const setShowContact = useStore(state => state.setShowContact);
 
     useEffect(() => {
 
@@ -30,7 +33,6 @@ export default function Template({ children }) {
                 'AQAySRaTcGIXQihC8lfmNxnZEm46lFA3puKd4xLXnFpwYsRkoFXadHBg_R7c_8Bu4_cF3rVeWq8AHZPJ4D1inB1mYqOy9i9zD1DaVclR97AMSMbAht1pdEDN16uHBRjZA54'
             ),
         ]).then((results) => {
-            console.log(results[0]);
             setNowPlaying(results[0]);
             setLoading(false);
         });
@@ -58,10 +60,11 @@ export default function Template({ children }) {
                         <Link href='/'><li className={`px-4 py-2 navitem ${clsx(selected === 1 && 'navbarSelected')}`} onClick={() => setSelected(1)}>Home</li></Link>
                         <Link href='/about'><li className={`px-4 py-2 navitem ${clsx(selected === 2 && 'navbarSelected')}`} onClick={() => setSelected(2)}>About</li></Link>
                         <Link href='/projects'><li className={`px-4 py-2 navitem ${clsx(selected === 3 && 'navbarSelected')}`} onClick={() => setSelected(3)}>Projects</li></Link>
-                        <Link href='#contact'><li className={`px-4 py-2 navitem }`}>Contact</li></Link>
+                        <li className={`px-4 py-2 navitem }`} onClick={() => setShowContact(!showContact)}>Contact</li>
                     </ul>
                 </div>
             </nav>
+            <Chat />
             {loading?<Preloader/>: children}
             <footer className='flex justify-center my-28 mx-10' id='contact'>
                 <div className='max-w-[900px] w-full flex gap-10 sm:gap-24 flex-col sm:flex-row'>
