@@ -86,7 +86,7 @@ const Option = ({ option, messages, setMessages, setCurrentOptions }) => {
             ];
         } else if (message == "Other options") {
             systemResponses = [
-                { type: "system", message: "There you go!", nextOptions: 2 }
+                { type: "system", message: "Here you go!", nextOptions: 2 }
             ];
         }
         else if (message == "Return to main menu") {
