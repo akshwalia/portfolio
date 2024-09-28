@@ -147,7 +147,7 @@ export default function Chat() {
         <AnimatePresence>
             {showContact && (
                 <motion.section
-                    className="w-[90%] sm:w-[30rem] h-[87%] fixed top-10 right-10 z-[2000] rounded-xl bg-[#ffffff80] backdrop-blur-xl shadow-[#00000033] shadow-2xl flex flex-col overflow-hidden"
+                    className="w-full text-xs md:text-base md:w-[30rem] h-full md:h-[87%] fixed top-0 right-0 md:top-10 md:right-10 z-[2000] md:rounded-xl bg-[#ffffff80] backdrop-blur-xl shadow-[#00000033] shadow-2xl flex flex-col overflow-hidden"
                     key="chat"
                     initial={{ y: 15, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
