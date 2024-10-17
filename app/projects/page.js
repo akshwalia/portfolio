@@ -151,7 +151,7 @@ export default function Projects() {
                                 <Image src='/calculator.png' width={200} height={250} alt='calculator' className='flex-grow-0 flex-shrink-0 absolute left-0 right-0 ml-auto mr-auto' />
                             </div>
                         </a>
-                        <a href="https://akshwalia.github.io/calculator/" target='_blank' className="projectcard bg-[#ffffff60] flex-2 rounded-3xl p-8 relative overflow-hidden min-h-[9.5rem] ">
+                        <a href="https://akshwalia.github.io/weather/" target='_blank' className="projectcard bg-[#ffffff60] flex-2 rounded-3xl p-8 relative overflow-hidden min-h-[9.5rem] ">
                             <div className='min-h-[250px] md:h-auto'>
                                 <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-2'>Weather App</h4>
                                 <p className='text-primary-green opacity-90 mb-3'> Get real-time weather updates, forecasts, and conditions for any location at your fingertips. Your go-to source for accurate weather info on the go!</p>
