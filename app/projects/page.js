@@ -130,7 +130,7 @@ export default function Projects() {
                             <div className='flex justify-between items-center'>
                                 <div className='h-full flex flex-col flex-1 justify-center py-3 md:py-0'>
                                     <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-2'>Quizzo</h4>
-                                    <p className='text-primary-green opacity-90'> Join live chats instantly! Connect, converse, and engage in real-time discussions on our dynamic platform.</p>
+                                    <p className='text-primary-green opacity-90'> A multiplayer quiz platform where you create rooms, challenge friends, and test your knowledge on any topic. Powered by Gemini for endless trivia fun!</p>
                                 </div>
                                 <Image src='/quizzo.png' width={100} height={0} alt='quizzo' className='flex-grow-0 flex-shrink-0 h-[100px] rounded-full' />
                             </div>
