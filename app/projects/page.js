@@ -46,7 +46,7 @@ export default function Projects() {
                 <div className="left border-solid flex flex-col gap-7">
                     <a href="https://chat-it-temp.vercel.app/" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl py-2 px-8 flex items-center justify-center">
                         <div className='flex justify-between items-center'>
-                            <div className='h-full flex flex-col flex-1 justify-center py-3 md:py-0'>
+                            <div className='h-full flex flex-col flex-1 justify-center py-3 md:pr-2 md:py-0'>
                                 <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-2'>ChatIt</h4>
                                 <p className='text-primary-green opacity-90'> Join live chats instantly! Connect, converse, and engage in real-time discussions on our dynamic platform.</p>
                             </div>
@@ -63,7 +63,7 @@ export default function Projects() {
                 </div>
                 <div className="centre border-solid flex flex-col gap-7">
                     <a href="https://metaversus-akshwalia.vercel.app" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl flex justify-between py-2 px-8 items-center">
-                        <div className='flex justify-between items-center py-3 md:py-0'>
+                        <div className='flex justify-between items-center py-3 md:pr-2 md:py-0'>
                             <div className='h-full flex flex-col flex-1 justify-center'>
                                 <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-2'>Metaversus</h4>
                                 <p className='text-primary-green opacity-90'> An immersive frontend project that transports you beyond reality using Next.js, Tailwind CSS, and Framer Motion.</p>
@@ -72,7 +72,7 @@ export default function Projects() {
                         </div>
                     </a>
                     <a href="https://pokemon-memory-card.vercel.app/" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl flex justify-between py-2 px-8 items-center">
-                        <div className='flex justify-between items-center py-3 md:py-0'>
+                        <div className='flex justify-between items-center py-3 md:pr-2 md:py-0'>
                             <div className='h-full flex flex-col flex-1 justify-center'>
                                 <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-3'>Pokémemo</h4>
                                 <p className='text-primary-green opacity-90'> Gotta Remember &apos;Em All! Can You Uncover &apos;Em Without A Second Poke?</p>
@@ -81,7 +81,7 @@ export default function Projects() {
                         </div>
                     </a>
                     <a href="http://where-pikachu.vercel.app/" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl flex justify-between py-2 px-8 items-center">
-                        <div className='flex justify-between items-center py-3 md:py-0'>
+                        <div className='flex justify-between items-center py-3 md:pr-2 md:py-0'>
                             <div className='h-full flex flex-col flex-1 justify-center'>
                                 <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-2'>Where&apos;s Pikachu</h4>
                                 <p className='text-primary-green opacity-90'> Scan the crowded image, spot the requested Pokemon, and test your eye for detail!</p>
@@ -116,23 +116,32 @@ export default function Projects() {
                 <ResponsiveMasonry
                     columnsCountBreakPoints={{ 700: 1, 800: 2, 1100: 3 }}
                 >
-                    <Masonry gutter='1.75rem' >
+                    <Masonry gutter='1.75rem' sequential>
                         <a href="https://chat-it-temp.vercel.app/" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl py-2 px-8 flex items-center justify-center min-h-[9.5rem] ">
                             <div className='flex justify-between items-center'>
-                                <div className='h-full flex flex-col flex-1 justify-center py-3 md:py-0'>
+                                <div className='h-full flex flex-col flex-1 justify-center py-3 md:pr-2 md:py-0'>
                                     <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-2'>ChatIt</h4>
                                     <p className='text-primary-green opacity-90'> Join live chats instantly! Connect, converse, and engage in real-time discussions on our dynamic platform.</p>
                                 </div>
                                 <Image src='/chatIcon.png' width={100} height={0} alt='chatit' className='flex-grow-0 flex-shrink-0 h-[100px] rounded-full' />
                             </div>
                         </a>
-                        <a href="https://quizzo-aksh.vercel.app/" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl py-2 px-8 flex items-center justify-center min-h-[9.5rem] ">
+                        <a href="https://quizzo-aksh.vercel.app/" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl py-2 px-8 flex items-center justify-center min-h-[12rem] ">
                             <div className='flex justify-between items-center'>
-                                <div className='h-full flex flex-col flex-1 justify-center py-3 md:py-0'>
+                                <div className='h-full flex flex-col flex-1 justify-center py-3 md:pr-2 md:py-0'>
                                     <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-2'>Quizzo</h4>
                                     <p className='text-primary-green opacity-90'> A multiplayer quiz platform where you create rooms, challenge friends, and test your knowledge on any topic. Powered by Gemini for endless trivia fun!</p>
                                 </div>
                                 <Image src='/quizzo.png' width={100} height={0} alt='quizzo' className='flex-grow-0 flex-shrink-0 h-[100px] rounded-full' />
+                            </div>
+                        </a>
+                        <a href="https://metaversus-akshwalia.vercel.app" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl flex justify-between py-2 px-8 items-center min-h-[9.5rem] ">
+                            <div className='flex justify-between items-center py-3 md:pr-2 md:py-0'>
+                                <div className='h-full flex flex-col flex-1 justify-center'>
+                                    <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-2'>Metaversus</h4>
+                                    <p className='text-primary-green opacity-90'> An immersive frontend project that transports you beyond reality using Next.js, Tailwind CSS, and Framer Motion.</p>
+                                </div>
+                                <Image src='/planet.png' width={150} height={150} alt='greatball' className='flex-grow-0 flex-shrink-0 -mr-7' />
                             </div>
                         </a>
                         <a href="https://akshwalia.github.io/calculator/" target='_blank' className="projectcard bg-[#ffffff60] flex-2 rounded-3xl p-8 relative overflow-hidden min-h-[9.5rem] ">
@@ -142,31 +151,29 @@ export default function Projects() {
                                 <Image src='/calculator.png' width={200} height={250} alt='calculator' className='flex-grow-0 flex-shrink-0 absolute left-0 right-0 ml-auto mr-auto' />
                             </div>
                         </a>
-                        <a href="https://metaversus-akshwalia.vercel.app" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl flex justify-between py-2 px-8 items-center min-h-[9.5rem] ">
-                            <div className='flex justify-between items-center py-3 md:py-0'>
-                                <div className='h-full flex flex-col flex-1 justify-center'>
-                                    <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-2'>Metaversus</h4>
-                                    <p className='text-primary-green opacity-90'> An immersive frontend project that transports you beyond reality using Next.js, Tailwind CSS, and Framer Motion.</p>
-                                </div>
-                                <Image src='/planet.png' width={150} height={150} alt='greatball' className='flex-grow-0 flex-shrink-0 -mr-7' />
-                            </div>
-                        </a>
-                        <a href="https://pokemon-memory-card.vercel.app/" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl flex justify-between py-2 px-8 items-center min-h-[9.5rem] ">
-                            <div className='flex justify-between items-center py-3 md:py-0'>
-                                <div className='h-full flex flex-col flex-1 justify-center'>
-                                    <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-3'>Pokémemo</h4>
-                                    <p className='text-primary-green opacity-90'> Gotta Remember &apos;Em All! Can You Uncover &apos;Em Without A Second Poke?</p>
-                                </div>
-                                <Image src='/pokeball.png' width={110} height={0} alt='pokeball' className='flex-grow-0 flex-shrink-0 h-[110px]' />
+                        <a href="https://akshwalia.github.io/calculator/" target='_blank' className="projectcard bg-[#ffffff60] flex-2 rounded-3xl p-8 relative overflow-hidden min-h-[9.5rem] ">
+                            <div className='min-h-[250px] md:h-auto'>
+                                <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-2'>Weather App</h4>
+                                <p className='text-primary-green opacity-90 mb-3'> Get real-time weather updates, forecasts, and conditions for any location at your fingertips. Your go-to source for accurate weather info on the go!</p>
+                                <Image src='/weather.png' width={400} height={250} alt='weather' className='flex-grow-0 flex-shrink-0 absolute left-0 right-0 ml-auto mr-auto' />
                             </div>
                         </a>
                         <a href="http://where-pikachu.vercel.app/" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl flex justify-between py-2 px-8 items-center min-h-[9.5rem] ">
-                            <div className='flex justify-between items-center py-3 md:py-0'>
+                            <div className='flex justify-between items-center py-3 md:pr-2 md:py-0'>
                                 <div className='h-full flex flex-col flex-1 justify-center'>
                                     <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-2'>Where&apos;s Pikachu</h4>
                                     <p className='text-primary-green opacity-90'> Scan the crowded image, spot the requested Pokemon, and test your eye for detail!</p>
                                 </div>
                                 <Image src='/greatball.png' width={100} height={0} alt='greatball' className='flex-grow-0 flex-shrink-0 h-[100px]' />
+                            </div>
+                        </a>
+                        <a href="https://pokemon-memory-card.vercel.app/" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl flex justify-between py-2 px-8 items-center min-h-[9.5rem] ">
+                            <div className='flex justify-between items-center py-3 md:pr-2 md:py-0'>
+                                <div className='h-full flex flex-col flex-1 justify-center'>
+                                    <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-3'>Pokémemo</h4>
+                                    <p className='text-primary-green opacity-90'> Gotta Remember &apos;Em All! Can You Uncover &apos;Em Without A Second Poke?</p>
+                                </div>
+                                <Image src='/pokeball.png' width={110} height={0} alt='pokeball' className='flex-grow-0 flex-shrink-0 h-[110px]' />
                             </div>
                         </a>
                         <a href="https://akshwalia.github.io/tic-tac-toe/" target='_blank' className="projectcard bg-[#ffffff60] flex-1.5 md:flex-1 xl:flex-1.5 rounded-3xl p-8 relative overflow-hidden min-h-[9.5rem] ">

@@ -78,11 +78,11 @@ export default function Home() {
         </a>
       </motion.section>
       <section className='flex gap-10 mx-11 mt-10 mb-20 lg:my-28 flex-wrap flex-col lg:flex-row'>
-        <a href="https://akshwalia.github.io/weather/" className='flex-2' target='_blank'>
+        <a href="https://quizzo-aksh.vercel.app/" className='flex-2' target='_blank'>
           <div className="card flex-1.5 h-[300px] sm:h-[420px] md:h-[450px] bg-[#a5764f91] rounded-[60px] text-right p-10 text-slate-800 relative overflow-hidden">
-            <p className='text-base sm:text-lg'>Javascript</p>
-            <h3 className={`${acorn.className} text-2xl sm:text-4xl lg:text-5xl`}>Weather App</h3>
-            <Image src='/weather.png' width={1500} height={800} alt='weather' className='cardImage absolute -bottom-12 w-[400px] sm:-bottom-32 md:-bottom-44 sm:w-[800px]  rounded-br-3xl' />
+            <p className='text-base sm:text-lg'>NextJS, Express, SocketIO</p>
+            <h3 className={`${acorn.className} text-2xl sm:text-4xl lg:text-5xl`}>Quizzo</h3>
+            <Image src='/quizzoSafari.png' width={1500} height={800} alt='weather' className='cardImage absolute -bottom-5 w-[400px] sm:-bottom-14 md:-bottom-24 sm:w-[800px]  rounded-br-3xl' />
           </div>
         </a>
         <a href="http://where-pikachu.vercel.app/" className='flex-1' target='_blank'>
