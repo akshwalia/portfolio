@@ -43,7 +43,7 @@ export default function About() {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.3, ease: 'easeIn', delay: 0.15 }}>
                         <div className='relative max-w-[370px] md:w-[30vw]'>
-                            <Image src='/aksh3.jpg' width={370} height={800} alt='Aksh' className='rounded-tr-full rounded-tl-full md:h-[500px] object-cover object center' />
+                            <Image src='/aksh3.jpg' width={370} height={800} alt='Aksh' className='rounded-tr-full rounded-tl-full md:h-[500px] object-cover object center' priority />
                             <Link href={nowPlaying.songUrl || 'https://open.spotify.com/user/31k6pgzdnag74vy767bu32ldeswi'}>
                                 <div className='bg-primary-green h-20 w-full absolute bottom-0 flex justify-start items-center gap-5 px-6 max-w-[370px]'>
                                     <Image src='/Spotify-white.svg' width={50} height={50} alt='spotify' className='rounded-full opacity-40' />
