@@ -4,11 +4,6 @@ import Image from 'next/image'
 import localFont from 'next/font/local'
 import clsx from 'clsx';
 import { motion, MotionConfig } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import querystring from 'querystring';
-import getNowPlayingItem from './getCurrentlyPlaying';
-import { useStore } from '@/store';
 
 const acorn = localFont({ src: './fonts/Acorn-Bold.woff2' });
 

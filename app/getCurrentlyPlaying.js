@@ -5,11 +5,10 @@ const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
 
 let cachedToken = null;
-let tokenExpiryTime = null;
+let tokenExpiry = null;
 
 const getAccessToken = async (client_id, client_secret, refresh_token) => {
-    // Return cached token if it's still valid
-    if (cachedToken && tokenExpiryTime && Date.now() < tokenExpiryTime) {
+    if (cachedToken && tokenExpiry && new Date() < tokenExpiry) {
         return { access_token: cachedToken };
     }
 
@@ -27,10 +26,8 @@ const getAccessToken = async (client_id, client_secret, refresh_token) => {
     });
 
     const data = await response.json();
-
-    // Cache the token and set expiry time (subtract 60 seconds for safety margin)
     cachedToken = data.access_token;
-    tokenExpiryTime = Date.now() + (data.expires_in - 60) * 1000;
+    tokenExpiry = new Date(new Date().getTime() + data.expires_in * 1000);
 
     return data;
 };
