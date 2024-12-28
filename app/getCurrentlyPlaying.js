@@ -7,33 +7,42 @@ const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-pla
 let cachedToken = null;
 let tokenExpiry = null;
 
+const getAuth = (client_id, client_secret) => {
+    return Buffer.from(`${client_id}:${client_secret}`).toString('base64');
+};
+
 const getAccessToken = async (client_id, client_secret, refresh_token) => {
     if (cachedToken && tokenExpiry && new Date() < tokenExpiry) {
-        return { access_token: cachedToken };
+        return cachedToken;
     }
 
-    const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
     const response = await fetch(TOKEN_ENDPOINT, {
-        method: "POST",
+        method: 'POST',
         headers: {
-            Authorization: `Basic ${basic}`,
-            "Content-Type": "application/x-www-form-urlencoded",
+            'Authorization': `Basic ${getAuth(client_id, client_secret)}`,
+            'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: querystring.stringify({
-            grant_type: "refresh_token",
-            refresh_token,
-        }),
+        body: new URLSearchParams({
+            grant_type: 'refresh_token',
+            refresh_token: refresh_token
+        })
     });
 
     const data = await response.json();
-    cachedToken = data.access_token;
-    tokenExpiry = new Date(new Date().getTime() + data.expires_in * 1000);
 
-    return data;
+    if (data.access_token) {
+        cachedToken = data.access_token;
+        tokenExpiry = new Date();
+        tokenExpiry.setSeconds(tokenExpiry.getSeconds() + data.expires_in);
+        return cachedToken;
+    } else {
+        console.error(JSON.stringify(data));
+        throw new Error(`Failed to refresh token: ${JSON.stringify(data)}`);
+    }
 };
 
 export const getNowPlaying = async (client_id, client_secret, refresh_token) => {
-    const { access_token } = await getAccessToken(
+    const access_token = await getAccessToken(
         client_id,
         client_secret,
         refresh_token
