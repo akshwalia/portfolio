@@ -27,9 +27,9 @@ export default function Template({ children }) {
     useEffect(() => {
         Promise.all([
             getNowPlayingItem(
-                '84ad7df739fe4534840ec0379140813a',
-                '1a0e5f8a157f48c8a6bd7c396181121b',
-                'AQAySRaTcGIXQihC8lfmNxnZEm46lFA3puKd4xLXnFpwYsRkoFXadHBg_R7c_8Bu4_cF3rVeWq8AHZPJ4D1inB1mYqOy9i9zD1DaVclR97AMSMbAht1pdEDN16uHBRjZA54'
+                '562f987bcb4d4371a7d3fa4915cad489',
+                '8f888f1eaa61430fbb9e5e6dd8218bb1',
+                'AQDHgANbFy4GUvFBhgF0dTO4xIcLJZlvhtTiJ9pgdmaRf3JH0O96UOC8KEi3TkHeRcNCWaz9c-HJPpqPn7dvvAHxPeiOfjacezY1SOCZJ9mV3sMQORrEPXfdYl_4NSYIJ4HuCvEZQKZgGZ1cTdBkgVe6djaXfvG0gKNk1xfkgzNIDTNbMQaD5wYWwbJucafIiCXjGw'
             ),
         ]).then((results) => {
             setNowPlaying(results[0]);
