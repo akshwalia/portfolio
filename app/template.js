@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import localFont from 'next/font/local'
 import { useStore } from "../store";
-import getNowPlayingItem from "./getCurrentlyPlaying";
+import getsongInfoItem from "./getCurrentlyPlaying";
 import Preloader from "./components/preloader";
 import Chat from "./components/chat";
 
@@ -17,22 +17,22 @@ export default function Template({ children }) {
 
     const selected = useStore(state => state.selected);
     const setSelected = useStore(state => state.setSelected);
-    const nowPlaying = useStore(state => state.nowPlaying);
+    const songInfo = useStore(state => state.songInfo);
     const setLoading = useStore(state => state.setLoading);
-    const setNowPlaying = useStore(state => state.setNowPlaying);
+    const setSongInfo = useStore(state => state.setSongInfo);
     const loading = useStore(state => state.loading);
     const showContact = useStore(state => state.showContact);
     const setShowContact = useStore(state => state.setShowContact);
 
     useEffect(() => {
         Promise.all([
-            getNowPlayingItem(
+            getsongInfoItem(
                 '562f987bcb4d4371a7d3fa4915cad489',
                 '8f888f1eaa61430fbb9e5e6dd8218bb1',
-                'AQC3XdP0LYZQkJ9Phvxe1MtoBB0LguXLXYDfMF1ZOoGz2UspNLdLmKpXIM3EwrYga4q2qQJpT5LnksNSBYg9IzvgDrW6oKjb5zwRJKD22lMHP7rfPAIvvs5CZrungoR2o18'
+                'AQCMVaZY84cd5lYHZGsfItni-l5vlYwEgt_vM_yjkroWddlstTEOQPPS_lnoDrYuvs8k8FYnSZrIkckbhnFxJXxFOf_zzsfEyBcG8hdUb6faRoF79QNlxbHXOl0Sn0EnjwM'
             ),
         ]).then((results) => {
-            setNowPlaying(results[0]);
+            setSongInfo(results[0]);
             setLoading(false);
         });
     }, []);
@@ -44,6 +44,23 @@ export default function Template({ children }) {
         window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, [scrollY]);
+
+    function timeAgo(date) {
+        const now = Date.now();
+        const seconds = Math.floor((now - new Date(date)) / 1000);
+        let interval = Math.floor(seconds / 31536000);
+
+        if (interval > 1) return `${interval}y ago`;
+        interval = Math.floor(seconds / 2592000);
+        if (interval > 1) return `${interval}mon ago`;
+        interval = Math.floor(seconds / 86400);
+        if (interval > 1) return `${interval}d ago`;
+        interval = Math.floor(seconds / 3600);
+        if (interval > 1) return `${interval}h ago`;
+        interval = Math.floor(seconds / 60);
+        if (interval > 1) return `${interval}m ago`;
+        return `${Math.floor(seconds)} seconds ago`;
+    }
 
     return (
         <>
@@ -67,13 +84,15 @@ export default function Template({ children }) {
                         <footer className='flex justify-center my-28 mx-10' id='contact'>
                             <div className='max-w-[900px] w-full flex gap-10 sm:gap-24 flex-col sm:flex-row'>
                                 <div className="left flex-2 flex flex-col gap-9 w-full">
-                                    <Link href={nowPlaying.songUrl || 'https://open.spotify.com/user/31k6pgzdnag74vy767bu32ldeswi'} target="_blank">
+                                    <Link href={songInfo.songUrl || 'https://open.spotify.com/user/31k6pgzdnag74vy767bu32ldeswi'} target="_blank">
                                         <div className="spotify flex justify-start items-center gap-4 bg-[#ffffffc7] rounded-[60px] px-5 py-1 w-full h-[90px]">
                                             <Image src={'/spotify.svg'} width={50} height={50} alt='spotify' className="opacity-90" />
                                             <div className='flex flex-col justify-center h-full text-primary-green'>
-                                                <p className='text-xs sm:text-sm text-primary-green opacity-90'>{nowPlaying ? 'Currently listening to' : 'On a break'}</p>
-                                                <h3 className="font-bold text-sm sm:text-lg opacity-95 mb-[3px]">{nowPlaying.title || ''}</h3>
-                                                <p className="text-[0.60rem] sm:text-xs -mt-2 opacity-95">{nowPlaying.artist}</p>
+                                                <p className='text-xs sm:text-sm text-primary-green opacity-90'>
+                                                    {songInfo ? (songInfo.playedAt ? `Last played ${timeAgo(songInfo.playedAt)}` : songInfo.isPlaying ? 'Currently listening to' : 'Currently paused on') : 'On a break'}
+                                                </p>
+                                                <h3 className="font-bold text-sm sm:text-lg opacity-95 mb-[3px]">{songInfo.title || ''}</h3>
+                                                <p className="text-[0.60rem] sm:text-xs -mt-2 opacity-95">{songInfo.artist}</p>
                                             </div>
                                         </div>
                                     </Link>
@@ -95,7 +114,6 @@ export default function Template({ children }) {
                     </>
                 )}
             </div>
-
         </>
     )
 }

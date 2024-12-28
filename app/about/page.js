@@ -14,11 +14,27 @@ export default function About() {
     const [showLocation, setShowLocation] = useState(0);
 
     const setSelected = useStore(state => state.setSelected);
-    const nowPlaying = useStore(state => state.nowPlaying);
+    const songInfo = useStore(state => state.songInfo);
 
     useEffect(() => {
         setSelected(2);
     }, [])
+
+    const formatTimeAgo = (date) => {
+        const seconds = Math.floor((new Date() - new Date(date)) / 1000);
+        let interval = Math.floor(seconds / 31536000);
+
+        if (interval > 1) return `${interval}y ago`;
+        interval = Math.floor(seconds / 2592000);
+        if (interval > 1) return `${interval}m ago`;
+        interval = Math.floor(seconds / 86400);
+        if (interval > 1) return `${interval}d ago`;
+        interval = Math.floor(seconds / 3600);
+        if (interval > 1) return `${interval}h ago`;
+        interval = Math.floor(seconds / 60);
+        if (interval > 1) return `${interval}m ago`;
+        return `${Math.floor(seconds)}s ago`;
+    };
 
     return (
         <main>
@@ -44,19 +60,22 @@ export default function About() {
                         transition={{ duration: 0.3, ease: 'easeIn', delay: 0.15 }}>
                         <div className='relative max-w-[370px] md:w-[30vw]'>
                             <Image src='/aksh3.jpg' width={370} height={800} alt='Aksh' className='rounded-tr-full rounded-tl-full md:h-[500px] object-cover object center' priority />
-                            <Link href={nowPlaying.songUrl || 'https://open.spotify.com/user/31k6pgzdnag74vy767bu32ldeswi'}>
+                            <Link href={songInfo.songUrl || 'https://open.spotify.com/user/31k6pgzdnag74vy767bu32ldeswi'}>
                                 <div className='bg-primary-green h-20 w-full absolute bottom-0 flex justify-start items-center gap-5 px-6 max-w-[370px]'>
                                     <Image src='/Spotify-white.svg' width={50} height={50} alt='spotify' className='rounded-full opacity-40' />
 
-                                    {nowPlaying ?
+                                    {songInfo ? (
                                         <div className='flex flex-col justify-center h-full text-white opacity-75'>
-                                            <p className='text-base text-white h-[23px] overflow-y-hidden'>{nowPlaying ? 'Currently listening to' : 'On a break'}</p>
-                                            <p className={`${acorn.className} text-lg h-[23px] overflow-y-hidden`}>{nowPlaying ? nowPlaying.title : ''}</p>
-                                        </div> :
+                                            <p className='text-base text-white h-[23px] overflow-y-hidden'>
+                                                {songInfo.playedAt ? `Last played ${formatTimeAgo(songInfo.playedAt)}` : songInfo.isPlaying ? 'Currently listening to' : 'Currently paused on'}
+                                            </p>
+                                            <p className={`${acorn.className} text-lg h-[23px] overflow-y-hidden`}>{songInfo.title}</p>
+                                        </div>
+                                    ) : (
                                         <div className='flex flex-col justify-center h-full text-white opacity-75'>
                                             <p className='text-lg text-white overflow-y-hidden'>On a break</p>
                                         </div>
-                                    }
+                                    )}
                                 </div>
                             </Link>
                         </div>

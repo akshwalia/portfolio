@@ -54,27 +54,65 @@ export const getNowPlaying = async (client_id, client_secret, refresh_token) => 
     });
 };
 
+const PREVIOUS_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/recently-played?limit=1`;
+
+export const getPreviousPlaying = async (client_id, client_secret, refresh_token) => {
+    const access_token = await getAccessToken(
+        client_id,
+        client_secret,
+        refresh_token
+    );
+    return fetch(PREVIOUS_PLAYING_ENDPOINT, {
+        headers: {
+            Authorization: `Bearer ${access_token}`,
+        },
+    });
+};
+
 export default async function getNowPlayingItem(
     client_id,
     client_secret,
     refresh_token
 ) {
-    const response = await getNowPlaying(client_id, client_secret, refresh_token);
+    let response = await getNowPlaying(client_id, client_secret, refresh_token);
     if (response.status === 204 || response.status > 400) {
-        return false;
-    }
-    const song = await response.json();
-    const albumImageUrl = song.item.album.images[0].url;
-    const artist = song.item.artists.map((_artist) => _artist.name).join(", ");
-    const isPlaying = song.is_playing;
-    const songUrl = song.item.external_urls.spotify;
-    const title = song.item.name;
+        response = await getPreviousPlaying(client_id, client_secret, refresh_token);
 
-    return {
-        albumImageUrl,
-        artist,
-        isPlaying,
-        songUrl,
-        title,
-    };
+        if (response.status === 204 || response.status > 400) {
+            return false;
+        }
+
+        const song = await response.json();
+        const albumImageUrl = song.items[0].track.album.images[0].url;
+        const artist = song.items[0].track.artists.map((_artist) => _artist.name).join(", ");
+        const isPlaying = false;
+        const songUrl = song.items[0].track.external_urls.spotify;
+        const title = song.items[0].track.name;
+        const playedAt = song.items[0].played_at;
+
+        return {
+            albumImageUrl,
+            artist,
+            isPlaying,
+            songUrl,
+            title,
+            playedAt
+        };
+    }
+    else {
+        const song = await response.json();
+        const albumImageUrl = song.item.album.images[0].url;
+        const artist = song.item.artists.map((_artist) => _artist.name).join(", ");
+        const isPlaying = song.is_playing;
+        const songUrl = song.item.external_urls.spotify;
+        const title = song.item.name;
+
+        return {
+            albumImageUrl,
+            artist,
+            isPlaying,
+            songUrl,
+            title,
+        };
+    }
 }

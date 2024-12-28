@@ -3,8 +3,8 @@ import { create } from "zustand";
 export const useStore = create((set) => ({
     selected: 1,
     setSelected: (id) => set({ selected: id }),
-    nowPlaying: false,
-    setNowPlaying: (nowPlaying) => set({ nowPlaying: nowPlaying }),
+    songInfo: false,
+    setSongInfo: (songInfo) => set({ songInfo: songInfo }),
     loading: true,
     setLoading: (loading) => set({ loading: loading }),
     showContact: false,
