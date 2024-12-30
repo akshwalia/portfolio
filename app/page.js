@@ -5,10 +5,16 @@ import localFont from 'next/font/local'
 import clsx from 'clsx';
 import { motion, MotionConfig } from 'framer-motion';
 import GitHubCalendar from 'react-github-calendar';
+import { useEffect } from 'react';
+import { useStore } from '@/store';
 
 const acorn = localFont({ src: './fonts/Acorn-Bold.woff2' });
 
 export default function Home() {
+  const setSelected = useStore(state => state.setSelected);
+  useEffect(() => {
+    setSelected(0);
+  }, []);
 
   return (
     <main>

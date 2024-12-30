@@ -8,11 +8,13 @@ import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
     const [scrollY, setScrollY] = useState(0);
+    const [isReady, setIsReady] = useState(false);
 
     const showContact = useStore(state => state.showContact);
     const setShowContact = useStore(state => state.setShowContact);
     const selected = useStore(state => state.selected);
     const setSelected = useStore(state => state.setSelected);
+    const loading = useStore(state => state.loading);
 
     const navRefs = useRef([]);
     const highlightRef = useRef(null);
@@ -33,8 +35,28 @@ export default function Navbar() {
         }
     }, [pathname]);
 
+    const updateHighlight = () => {
+        if (!highlightRef.current || !navRefs.current[selected] || !navContainerRef.current) return;
+
+        const currentItem = navRefs.current[selected];
+        const navContainer = navContainerRef.current;
+        const itemRect = currentItem.getBoundingClientRect();
+        const containerRect = navContainer.getBoundingClientRect();
+
+        highlightRef.current.style.width = `${itemRect.width}px`;
+        highlightRef.current.style.transform = `translateX(${itemRect.left - containerRect.left}px)`;
+    };
+
     useEffect(() => {
-        if (!highlightRef.current || !navRefs.current[selected]) return;
+        // Wait for next frame to ensure DOM is ready
+        requestAnimationFrame(() => {
+            setIsReady(true);
+            updateHighlight();
+        });
+    }, []); // Run once on mount
+
+    useEffect(() => {
+        if (!isReady) return;
 
         const updateHighlight = () => {
             const currentItem = navRefs.current[selected];
@@ -49,21 +71,19 @@ export default function Navbar() {
             }
         };
 
-        // Initial update
         updateHighlight();
 
-        // Update on window resize
         window.addEventListener('resize', updateHighlight);
         return () => window.removeEventListener('resize', updateHighlight);
-    }, [selected]);
-
+    }, [selected, isReady]);
 
     const handleNavClick = (index) => {
         if (index === 3) {
             setShowContact(!showContact);
         }
-        else
+        else {
             setSelected(index);
+        }
     };
 
     useEffect(() => {
@@ -75,7 +95,7 @@ export default function Navbar() {
     }, [scrollY]);
 
     return (
-        <nav className="flex justify-center m-5 text-primary-green font-bold sticky top-5 z-[1000]">
+        <nav className={`flex justify-center m-5 text-primary-green font-bold top-5 z-[1000] ${clsx(loading ? 'opacity-0 absolute' : "sticky")}`}>
             <ul ref={navContainerRef} className={`navbar relative flex items-center justify-between text-sm sm:text-xl max-w-[500px] py-3 sm:py-4 px-2 ${clsx(scrollY > 120 && 'fixNav')}`}>
                 {navItems.map((item, index) => (
                     <li
