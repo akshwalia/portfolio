@@ -112,13 +112,17 @@ export default function About() {
                 </div>
             </section> */}
 
-            <section className='flex flex-col items-center'>
-                <h2 className={`${acorn.className} text-3xl sm:text-4xl text-primary-green mb-10`}>GitHub Contributions</h2>
+            <section className='flex flex-col items-center w-fit max-w-[80vw] mx-auto'>
+                <h2 className={`${acorn.className} text-3xl sm:text-4xl text-primary-green mb-10 w-full`}>GitHub Contributions</h2>
                 <GitHubCalendar
                     username='akshwalia'
                     colorScheme='light'
                     theme={{
                         "light": [
+                            "rgba(255, 255, 255, 0.30)",
+                            "hsl(172, 96%, 18%)"
+                        ],
+                        "dark": [
                             "rgba(255, 255, 255, 0.30)",
                             "hsl(172, 96%, 18%)"
                         ]
@@ -127,6 +131,8 @@ export default function About() {
                     blockSize={16}
                     fontSize={12}
                     style={{ width: '100%', height: '100%' }}
+                    maxLevel={5}
+                    blockMargin={2}
                 />
             </section>
 
