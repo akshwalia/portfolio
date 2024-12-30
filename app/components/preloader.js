@@ -10,7 +10,7 @@ export default function Preloader() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col items-center justify-center min-h-screen bg-transparent"
+      className="flex flex-col items-center justify-center min-h-[90vh] bg-transparent"
     >
       <h1 className="text-5xl md:text-7xl font-bold text-primary-green mb-4" lang="hi">
         नमस्ते

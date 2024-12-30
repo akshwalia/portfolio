@@ -14,7 +14,7 @@ export default function Projects() {
     const setSelected = useStore(state => state.setSelected);
 
     useEffect(() => {
-        setSelected(3);
+        setSelected(2);
     }, []);
 
     return (

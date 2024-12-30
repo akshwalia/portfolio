@@ -1,3 +1,5 @@
+'use client'
+
 import { useStore } from "@/store";
 import Image from "next/image";
 import localFont from 'next/font/local';
@@ -75,7 +77,7 @@ const Option = ({ option, messages, setMessages, setCurrentOptions }) => {
             ];
         } else if (message === "Just saying Hello!") {
             systemResponses = [
-                
+
                 { type: "system", message: "Hello!" },
                 { type: "system", message: "I hope you've enjoyed browsing my work 😁" },
                 { type: "system", message: "Can I help you with anything else?", nextOptions: 0 }
@@ -147,7 +149,7 @@ export default function Chat() {
         <AnimatePresence>
             {showContact && (
                 <motion.section
-                    className="w-full text-xs md:text-base md:w-[30rem] h-full md:h-[87%] fixed top-0 right-0 md:top-10 md:right-10 z-[2000] md:rounded-xl bg-[#ffffff80] backdrop-blur-xl shadow-[#00000033] shadow-2xl flex flex-col overflow-hidden"
+                    className="w-full text-xs md:text-base md:w-[30rem] h-full md:h-[87vh] fixed top-0 right-0 md:top-10 md:right-10 z-[2000] md:rounded-xl bg-[#ffffff80] backdrop-blur-xl shadow-[#00000033] shadow-2xl flex flex-col overflow-hidden"
                     key="chat"
                     initial={{ y: 15, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}

@@ -18,7 +18,7 @@ export default function About() {
     const songInfo = useStore(state => state.songInfo);
 
     useEffect(() => {
-        setSelected(2);
+        setSelected(1);
     }, [])
 
     const formatTimeAgo = (date) => {

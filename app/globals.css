@@ -47,7 +47,6 @@ html {
 }
 
 nav {
-  perspective: 10px;
   z-index: 1000;
 }
 
@@ -89,6 +88,7 @@ nav {
 .fixNav {
   background-color: rgba(255, 255, 255, 0.614);
   transition: background-color 0.3s ease;
+  z-index: 1000;
 }
 
 .navitem {
@@ -130,7 +130,6 @@ ul .navbarSelected {
   transition-property: box-shadow, transform;
   transition-duration: 0.4s, 0.4s;
   transition-timing-function: ease, ease;
-  perspective: 10px;
   z-index: 100;
 }
 
@@ -145,8 +144,7 @@ ul .navbarSelected {
 .projectcard {
   cursor: pointer;
   transition: transform 0.4s ease;
-  perspective: 10px;
-  z-index: 100;
+  z-index: 10;
 }
 
 .projectcard:hover {

@@ -13,16 +13,10 @@ import Chat from "./components/chat";
 const acorn = localFont({ src: './fonts/Acorn-Bold.woff2' });
 
 export default function Template({ children }) {
-    const [scrollY, setScrollY] = useState(0);
-
-    const selected = useStore(state => state.selected);
-    const setSelected = useStore(state => state.setSelected);
     const songInfo = useStore(state => state.songInfo);
     const setLoading = useStore(state => state.setLoading);
     const setSongInfo = useStore(state => state.setSongInfo);
     const loading = useStore(state => state.loading);
-    const showContact = useStore(state => state.showContact);
-    const setShowContact = useStore(state => state.setShowContact);
 
     useEffect(() => {
         Promise.all([
@@ -36,14 +30,6 @@ export default function Template({ children }) {
             setLoading(false);
         });
     }, []);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrollY(window.scrollY);
-        }
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [scrollY]);
 
     function timeAgo(date) {
         const now = Date.now();
@@ -64,22 +50,9 @@ export default function Template({ children }) {
 
     return (
         <>
-            <div className="gradient min-h-[100vh] min-w-[100vw] overflow-hidden">
-            </div>
             <div>
                 {loading ? <Preloader /> : (
                     <>
-                        <nav className="flex justify-center m-5 text-primary-green font-bold sticky top-5 z-1000">
-                            <div className="scale-[65%] sm:scale-100">
-                                <ul className={`navbar relative flex items-center justify-between text-xl max-w-[500px] p-2 ${clsx(scrollY > 130 && 'fixNav')}`}>
-                                    <Link href='/'><li className={`px-4 py-2 navitem ${clsx(selected === 1 && 'navbarSelected')}`} onClick={() => setSelected(1)}>Home</li></Link>
-                                    <Link href='/about'><li className={`px-4 py-2 navitem ${clsx(selected === 2 && 'navbarSelected')}`} onClick={() => setSelected(2)}>About</li></Link>
-                                    <Link href='/projects'><li className={`px-4 py-2 navitem ${clsx(selected === 3 && 'navbarSelected')}`} onClick={() => setSelected(3)}>Projects</li></Link>
-                                    <li className="px-4 py-2 navitem" onClick={() => setShowContact(!showContact)}>Contact</li>
-                                </ul>
-                            </div>
-                        </nav>
-                        <Chat />
                         {children}
                         <footer className='flex justify-center my-28 mx-10' id='contact'>
                             <div className='max-w-[900px] w-full flex gap-10 sm:gap-24 flex-col sm:flex-row'>
