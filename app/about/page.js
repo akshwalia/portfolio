@@ -113,7 +113,7 @@ export default function About() {
             </section> */}
 
             <section className='flex flex-col items-center w-fit max-w-[80vw] mx-auto mb-10'>
-                <h2 className={`${acorn.className} text-3xl sm:text-4xl text-primary-green mb-10 w-full`}>GitHub Contributions</h2>
+                <h2 className={`${acorn.className} text-3xl sm:text-4xl text-primary-green mb-3 w-full`}>GitHub Contributions</h2>
                 <GitHubCalendar
                     username='akshwalia'
                     colorScheme='light'
