@@ -22,6 +22,7 @@
     "querystring": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-github-calendar": "^4.5.2",
     "react-responsive-masonry": "^2.4.1",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",

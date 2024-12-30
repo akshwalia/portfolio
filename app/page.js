@@ -4,6 +4,7 @@ import Image from 'next/image'
 import localFont from 'next/font/local'
 import clsx from 'clsx';
 import { motion, MotionConfig } from 'framer-motion';
+import GitHubCalendar from 'react-github-calendar';
 
 const acorn = localFont({ src: './fonts/Acorn-Bold.woff2' });
 
@@ -102,7 +103,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.3, ease: 'easeIn', delay: 0.3 }}>Versatile expertise in web development, proficient in a spectrum of languages and frameworks, dedicated to delivering seamless, user-centric digital solutions.</motion.p>
       </section>
-      <section className='flex justify-center mb-20 mx-10 sm:mx-16'>
+      <section className='flex justify-center mb-20 mx-10 sm:mx-16 flex-col items-center gap-8'>
         <div className='icons flex justify-center max-w-[950px] w-full flex-wrap gap-5'>
           <MotionConfig
 
@@ -200,8 +201,12 @@ export default function Home() {
             </motion.div>
 
           </MotionConfig>
+
         </div>
+
       </section>
+
+
 
 
     </main>

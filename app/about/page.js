@@ -7,6 +7,7 @@ import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import { useStore } from "@/store";
 import Link from 'next/link';
+import GitHubCalendar from 'react-github-calendar';
 
 const acorn = localFont({ src: '../fonts/Acorn-Bold.woff2' });
 
@@ -111,13 +112,22 @@ export default function About() {
                 </div>
             </section> */}
 
-            <section className='flex flex-col sm:pr-64 mb-11 mx-10 pt-10'>
-                <div className='self-end max-w-[800px]'>
-                    <h3 className={`${acorn.className} text-primary-green text-2xl sm:text-[3vw] mb-5`}>Open to collaboration with a focus on sustainability, education, equality, or carbon neutrality.</h3>
-                    <div className='max-w-[600px] text-primary-green opacity-95 text-base sm:text-xl'>
-                        I&apos;m driven by the belief that we should leave our Earth in a better state for future generations. My aim is to contribute to these ideals in any way possible. If you share this vision, I&apos;d love to connect and discuss further.
-                    </div>
-                </div>
+            <section className='flex flex-col items-center'>
+                <h2 className={`${acorn.className} text-3xl sm:text-4xl text-primary-green mb-10`}>GitHub Contributions</h2>
+                <GitHubCalendar
+                    username='akshwalia'
+                    colorScheme='light'
+                    theme={{
+                        "light": [
+                            "rgba(255, 255, 255, 0.30)",
+                            "hsl(172, 96%, 18%)"
+                        ]
+                    }}
+                    blockRadius={20}
+                    blockSize={16}
+                    fontSize={12}
+                    style={{ width: '100%', height: '100%' }}
+                />
             </section>
 
             <section className='bg-[#ffffff3e] sm:rounded-[60px] sm:m-11 mb-10 sm:mb-20 grid grid-cols-1 sm:grid-cols-2 py-8 px-10 sm:py-28 sm:px-36 gap-16 sm:gap-10'>
