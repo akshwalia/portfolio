@@ -21,7 +21,7 @@ export function SkillSection() {
     ]
 
     return (
-        <section className='flex justify-center mb-20 mx-10 sm:mx-16 flex-col items-center gap-8'>
+        <section className='flex justify-center mb-5 sm:mb-20 mx-5 sm:mx-16 flex-col items-center gap-8'>
             <div className='icons flex justify-center max-w-[950px] w-full flex-wrap gap-2 sm:gap-5 '>
                 <MotionConfig>
                     {technologies.map((tech, index) => (
