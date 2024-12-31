@@ -12,7 +12,7 @@ export function SkillSection() {
         { src: '/react.svg', alt: 'React', delay: 0.2 },
         { src: '/node.svg', alt: 'Node.js', delay: 0.25 },
         { src: '/redux.svg', alt: 'Redux', delay: 0.3 },
-        { src: '/firebase.svg', alt: 'Firebase', delay: 0.35 },
+        { src: '/typescript.svg', alt: 'TypeScript', delay: 0.35, className: 'scale-75 rounded-md sm:rounded-lg' },
         { src: '/aws.svg', alt: 'AWS', delay: 0.4, className: 'relative top-[2px]' },
         { src: '/html.svg', alt: 'HTML5', delay: 0.45, className: 'relative top-[2px] sm:top-1' },
         { src: '/css.svg', alt: 'CSS3', delay: 0.5, className: 'relative top-[2px] sm:top-1' },
