@@ -96,8 +96,8 @@ export default function Home() {
           </div>
         </a>
       </section>
-      <section className='flex flex-col items-center justify-center mt-10 sm:mt-28 mb-10 sm:mb-20 sm:gap-10' id='skills'>
-        <div className='flex flex-col items-center justify-center sm:px-[15vh] sm:py-[2vh] relative w-fit text-6xl sm:text-[8.7vw] '>
+      <section className='flex flex-col items-center justify-center mt-10 sm:mt-28 mb-8 sm:mb-20 sm:gap-3' id='skills'>
+        <div className='flex flex-col items-center justify-center sm:px-[15vh] relative w-fit text-5xl sm:text-[8.7vw] '>
           <motion.h2 className={`${acorn.className} text-primary-green`}
             initial={{ y: -30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
