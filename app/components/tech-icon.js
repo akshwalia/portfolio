@@ -24,7 +24,7 @@ export function TechIcon({ src, alt, delay, className = '' }) {
                         <Image src={src} width={70} height={70} alt={alt} className={`w-[27px] sm:w-[70px] ${className}`} />
                     </motion.div>
                 </TooltipTrigger>
-                <TooltipContent className="bg-transparent text-primary-green border-2 border-primary-green rounded-full font-bold">
+                <TooltipContent className="bg-white/80 text-xs z-50 text-primary-green border-2 border-primary-green rounded-full font-bold">
                     <p>{alt}</p>
                 </TooltipContent>
             </Tooltip>

@@ -44,7 +44,6 @@ const LinkOption = ({ option, link, messages, setMessages, setCurrentOptions }) 
             target="_blank"
             rel="noopener noreferrer"
             className="py-3 px-4 cursor-pointer rounded-full font-bold text-darker-green border-darker-green border-[2.2px] border-solid w-fit mb-2 mr-2 block"
-            download={option === "Download Resume" ? "Aksh Walia Resume.pdf" : undefined}
         >
             {option}
         </a>
