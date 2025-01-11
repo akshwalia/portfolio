@@ -69,7 +69,7 @@ export default function Template({ children }) {
                                             </div>
                                         </div>
                                     </Link>
-                                    <div className="copyright hidden sm:block">&copy; {new Date().getFullYear()} Aksh Walia</div>
+                                    <div className="copyright hidden sm:block ml-2">Insipired from Sean Halpin</div>
                                 </div>
                                 <div className="right flex-1 flex justify-center sm:justify-normal">
                                     <div className="flex flex-col justify-center gap-5">
