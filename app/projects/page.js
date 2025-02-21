@@ -65,7 +65,7 @@ export default function Projects() {
                 <div className="left border-solid flex flex-col gap-7">
                     <a href="https://chat-it-temp.vercel.app/" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl py-2 px-8 flex items-center justify-center">
                         <div className='flex justify-between items-center'>
-                            <div className='h-full flex flex-col flex-1 justify-center py-3 md:pr-2 md:py-0'>
+                            <div className='h-full flex flex-col flex-1 justify-center md:pr-2 md:py-0'>
                                 <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-2'>ChatIt</h4>
                                 <p className='text-primary-green opacity-90'> Join live chats instantly! Connect, converse, and engage in real-time discussions on our dynamic platform.</p>
                             </div>
@@ -82,7 +82,7 @@ export default function Projects() {
                 </div>
                 <div className="centre border-solid flex flex-col gap-7">
                     <a href="https://metaversus-akshwalia.vercel.app" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl flex justify-between py-2 px-8 items-center">
-                        <div className='flex justify-between items-center py-3 md:pr-2 md:py-0'>
+                        <div className='flex justify-between items-center md:pr-2 md:py-0'>
                             <div className='h-full flex flex-col flex-1 justify-center'>
                                 <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-2'>Metaversus</h4>
                                 <p className='text-primary-green opacity-90'> An immersive frontend project that transports you beyond reality using Next.js, Tailwind CSS, and Framer Motion.</p>
@@ -91,7 +91,7 @@ export default function Projects() {
                         </div>
                     </a>
                     <a href="https://pokemon-memory-card.vercel.app/" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl flex justify-between py-2 px-8 items-center">
-                        <div className='flex justify-between items-center py-3 md:pr-2 md:py-0'>
+                        <div className='flex justify-between items-center md:pr-2 md:py-0'>
                             <div className='h-full flex flex-col flex-1 justify-center'>
                                 <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-3'>Pokémemo</h4>
                                 <p className='text-primary-green opacity-90'> Gotta Remember &apos;Em All! Can You Uncover &apos;Em Without A Second Poke?</p>
@@ -100,7 +100,7 @@ export default function Projects() {
                         </div>
                     </a>
                     <a href="http://where-pikachu.vercel.app/" target='_blank' className="projectcard bg-[#ffffff60] flex-1 rounded-3xl flex justify-between py-2 px-8 items-center">
-                        <div className='flex justify-between items-center py-3 md:pr-2 md:py-0'>
+                        <div className='flex justify-between items-center md:pr-2 md:py-0'>
                             <div className='h-full flex flex-col flex-1 justify-center'>
                                 <h4 className='font-bold text-[19px] md:text-xl text-primary-green mb-2'>Where&apos;s Pikachu</h4>
                                 <p className='text-primary-green opacity-90'> Scan the crowded image, spot the requested Pokemon, and test your eye for detail!</p>
@@ -129,7 +129,7 @@ export default function Projects() {
             </motion.section> */}
 
       <motion.section
-        className="mx-11"
+        className="mx-5 sm:mx-11"
         initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.3, ease: "easeIn", delay: 0.4 }}
@@ -142,10 +142,10 @@ export default function Projects() {
             <a
               href="https://chat-it-temp.vercel.app/"
               target="_blank"
-              className="projectcard bg-[#ffffff60] flex-1 rounded-3xl py-2 px-8 flex items-center justify-center min-h-[9.5rem] "
+              className="projectcard block bg-[#ffffff60] rounded-3xl p-6 md:p-8"
             >
               <div className="flex justify-between items-center">
-                <div className="h-full flex flex-col flex-1 justify-center py-3 md:pr-2 md:py-0">
+                <div className="h-full flex flex-col flex-1 justify-center md:pr-2 md:py-0">
                   <h4 className="font-bold text-[19px] md:text-xl text-primary-green mb-2">
                     ChatIt
                   </h4>
@@ -167,10 +167,10 @@ export default function Projects() {
             <a
               href="https://quizzo-aksh.vercel.app/"
               target="_blank"
-              className="projectcard bg-[#ffffff60] flex-1 rounded-3xl py-2 px-8 flex items-center justify-center min-h-[12rem] "
+              className="projectcard block bg-[#ffffff60] rounded-3xl p-6 md:p-8 "
             >
               <div className="flex justify-between items-center">
-                <div className="h-full flex flex-col flex-1 justify-center py-3 md:pr-2 ">
+                <div className="flex flex-col justify-center md:pr-2 ">
                   <h4 className="font-bold text-[19px] md:text-xl text-primary-green mb-2">
                     Quizzo
                   </h4>
@@ -193,9 +193,9 @@ export default function Projects() {
             <a
               href="https://metaversus-akshwalia.vercel.app"
               target="_blank"
-              className="projectcard bg-[#ffffff60] flex-1 rounded-3xl flex justify-between py-2 px-8 items-center min-h-[9.5rem] "
+              className="projectcard block bg-[#ffffff60] rounded-3xl p-6 md:p-8"
             >
-              <div className="flex justify-between items-center py-3 md:pr-2 md:py-0">
+              <div className="flex justify-between items-center md:pr-2 md:py-0">
                 <div className="h-full flex flex-col flex-1 justify-center">
                   <h4 className="font-bold text-[19px] md:text-xl text-primary-green mb-2">
                     Metaversus
@@ -265,10 +265,10 @@ export default function Projects() {
             <a
               href="https://whatsapp-analyzer-akshwalia.streamlit.app/"
               target="_blank"
-              className="projectcard bg-[#ffffff60] flex-1 rounded-3xl flex justify-between py-2 px-8 items-center min-h-[9.5rem] "
+              className="projectcard block bg-[#ffffff60] rounded-3xl p-6 md:p-8"
             >
-              <div className="flex w-full justify-between items-center py-3 md:pr-2 md:py-0">
-                <div className="h-full flex flex-col flex-1 justify-center py-3">
+              <div className="flex w-full justify-between items-center md:pr-2 md:py-0">
+                <div className="h-full flex flex-col flex-1 justify-center">
                   <h4 className="font-bold text-[19px] md:text-xl text-primary-green mb-2">
                     WhatsApp Chat Analyzer
                   </h4>
@@ -289,9 +289,9 @@ export default function Projects() {
             <a
               href="http://where-pikachu.vercel.app/"
               target="_blank"
-              className="projectcard bg-[#ffffff60] flex-1 rounded-3xl flex justify-between py-2 px-8 items-center min-h-[9.5rem] "
+              className="projectcard block bg-[#ffffff60] rounded-3xl p-6 md:p-8"
             >
-              <div className="flex justify-between items-center py-3 md:pr-2 md:py-0">
+              <div className="flex justify-between items-center md:pr-2 md:py-0">
                 <div className="h-full flex flex-col flex-1 justify-center">
                   <h4 className="font-bold text-[19px] md:text-xl text-primary-green mb-2">
                     Where&apos;s Pikachu
@@ -314,9 +314,9 @@ export default function Projects() {
             <a
               href="https://pokemon-memory-card.vercel.app/"
               target="_blank"
-              className="projectcard bg-[#ffffff60] flex-1 rounded-3xl flex justify-between py-2 px-8 items-center min-h-[9.5rem] "
+              className="projectcard block bg-[#ffffff60] rounded-3xl p-6 md:p-8"
             >
-              <div className="flex justify-between items-center py-3 md:pr-2 md:py-0">
+              <div className="flex justify-between items-center md:pr-2 md:py-0">
                 <div className="h-full flex flex-col flex-1 justify-center">
                   <h4 className="font-bold text-[19px] md:text-xl text-primary-green mb-3">
                     Pokémemo
